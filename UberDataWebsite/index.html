@@ -71,8 +71,8 @@
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#home" class="page-scroll">Home</a></li>
         <li><a href="#about-section" class="page-scroll">About</a></li>
-        <li><a href="#understand-section" class="page-scroll">Uber by Location</a></li>
         <li><a href="#analysis-section" class="page-scroll">Uber by Time</a></li>
+        <li><a href="#understand-section" class="page-scroll">Uber by Neighborhoods</a></li>
         <li><a href="#services-section" class="page-scroll">Uber vs. FHV</a></li>
         <li><a href="#method-section" class="page-scroll">Methodology</a></li>
         <li><a href="#team-section" class="page-scroll">Team</a></li>
@@ -149,54 +149,11 @@
   </div>
 </div>
 
-<!-- Understanding Yelp Section -->
-<div id="understand-section">
-  <div class="container">
-    <div class="row">
-      <div class="section-title text-center center wow fadeInDown">
-        <h2>Understanding Yelp</h2>
-        <hr>
-      </div>
-      <div class="row wow fadeInDown" data-wow-delay="200ms">
-        <div class="col-md-8"> 
-          <script type='text/javascript' src='https://public.tableau.com/javascripts/api/viz_v1.js'></script><div class='tableauPlaceholder' style='width: 750px; height: 742px;'><noscript><a href='#'><img alt='Justification_Ranking ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ye&#47;Yelp_Ranking&#47;Justification_Ranking&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz' width='750' height='650' style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='site_root' value='' /><param name='name' value='Yelp_Ranking&#47;Justification_Ranking' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ye&#47;Yelp_Ranking&#47;Justification_Ranking&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='showTabs' value='y' /></object></div>
-        </div>
-        <div class="col-md-4">
-          <div class="about-text">
-            <h1 class="viz-title">Exploring Top-Ranked Restaurants</h1>
-            <h3 class="viz-subtitle">We first wanted to see the validity of Yelp's own ranking based on number of reviews and review stars.</h3>
-            <p>Since we wanted to distinguish what might differentiate the top restaurants from the weaker ones, we needed to find some sort of defining the feature. Upon further exploration, we find out that star rating isn't the attribute that best defines restaurants since the majority of the top restaurants are 4 stars. So, to solve this problem we decided to take the very ambiguous ranking algorithm that Yelp uses to determine more insight about the top restaurants. To do this we scraped the Yelp website for "Best Restaurants in Pittsburgh, Pa," to determine what they are. We only received the top 100 restaurants which are more than half of the total restaurants and the rest we gave them the same ranking. Because there are over a thousand, and that in itself might not be very descriptive we added bins of size 10 to minimize the top 1000 to the top 100 bins. Once, we matched all the bands to the corresponding restaurant, we explored and implore you to explore the relationship that the top restaurants have an average rating and a number of reviews. Using Tableau we explore this, and by selecting the bins you can see correlations, For example selecting groups 0 to 5, you  see how they are all in the top right. As you increase the size or go down the ranking group, the lower average number of reviews, and rating as well.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="section-title text-center center wow fadeInDown">
-        <hr>
-      </div>
-
-
-      <div class="row wow fadeInDown" data-wow-delay="200ms">
-        <div class="col-md-4">
-          <div class="about-text">
-            <h1 class="viz-title">Exploring Restaurant Locations</h1>
-            <h3 class="viz-subtitle">Then we wanted to explore if location had any impact on ranking of the restaurants.</h3>
-            <p>Lastly, we wanted to see if there was anything to be shown about the location of the restaurants. So using a map of Pittsburgh and their ranking you can explore where the top restaurants are, and where the not so high ranking restaurants are.</p>
-          </div>
-        </div>
-        <div class="col-md-8"> 
-          <script type='text/javascript' src='https://public.tableau.com/javascripts/api/viz_v1.js'></script><div class='tableauPlaceholder' style='width: 750px; height: 742px;'><noscript><a href='#'><img alt='Rank_Map ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ye&#47;Yelp_Map&#47;Rank_Map&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz' width='750' height='742' style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='site_root' value='' /><param name='name' value='Yelp_Map&#47;Rank_Map' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ye&#47;Yelp_Map&#47;Rank_Map&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='showTabs' value='y' /></object></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-
 <div id="analysis-section">
   <div class="container">
     <div class="row">
       <div class="section-title text-center center wow fadeInDown">
-        <h2>Feature Analysis</h2>
+        <h2>Uber By Neighborhoods</h2>
         <hr>
       </div>
       <div class="row wow fadeInDown" data-wow-delay="200ms">
@@ -213,8 +170,8 @@
       </div>
       <div class="row wow fadeInDown" data-wow-delay="200ms">
         <div class="col-md-1"></div>
-        <div class="col-md-8 text-center"> 
-          <script type='text/javascript' src='https://public.tableau.com/javascripts/api/viz_v1.js'></script><div class='tableauPlaceholder' style='width: 1000px; height: 742px;'><noscript><a href='#'><img alt='Dashboard 1 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ne&#47;New_Yelp_Word_Count_Attributes&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz' width='1000' height='742' style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='site_root' value='' /><param name='name' value='New_Yelp_Word_Count_Attributes&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ne&#47;New_Yelp_Word_Count_Attributes&#47;Dashboard1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='showTabs' value='y' /></object></div>
+        <div class="col-md-10 text-center"> 
+          <div class='tableauPlaceholder' id='viz1488661796562' style='position: relative'><noscript><a href='#'><img alt='HeatMap ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;4P&#47;4P83HMTNJ&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='path' value='shared&#47;4P83HMTNJ' /> <param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;4P&#47;4P83HMTNJ&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1488661796562');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
         </div>
         <div class="col-md-1"></div>
       </div>
@@ -236,8 +193,40 @@
         <div class="col-md-1"></div>
       </div>
       <div class="row wow fadeInDown" data-wow-delay="200ms">
-        <div class="col-md-12 text-center"> 
-          <div id="chart1"></div>
+        <div class="col-md-1"></div>
+        <div class="col-md-10 text-center"> 
+          <div class='tableauPlaceholder' id='viz1488661721555' style='position: relative'><noscript><a href='#'><img alt='WordMap ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ub&#47;Uber_Location_Vizualizations&#47;WordMap&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='site_root' value='' /><param name='name' value='Uber_Location_Vizualizations&#47;WordMap' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ub&#47;Uber_Location_Vizualizations&#47;WordMap&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1488661721555');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+        </div>
+        <div class="col-md-1"></div>
+      </div>
+
+      <div class="section-title text-center center wow fadeInDown">
+        <hr>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<!-- Understanding Yelp Section -->
+<div id="understand-section">
+  <div class="container">
+    <div class="row">
+      <div class="section-title text-center center wow fadeInDown">
+        <h2>Uber By Time</h2>
+        <hr>
+      </div>
+      <div class="row wow fadeInDown" data-wow-delay="200ms">
+        <div class="col-md-8"> 
+         <div class='tableauPlaceholder' id='viz1488648584266' style='position: relative'><noscript><a href='#'><img alt='Day of Year ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ub&#47;Uber_Time_Vizualizations&#47;DayofYear&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='site_root' value='' /><param name='name' value='Uber_Time_Vizualizations&#47;DayofYear' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ub&#47;Uber_Time_Vizualizations&#47;DayofYear&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1488648584266');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='754px';vizElement.style.height='669px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+        </div>
+        <div class="col-md-4">
+          <div class="about-text">
+            <h1 class="viz-title">Uber Rides By Day of Year</h1>
+            <h3 class="viz-subtitle">We first wanted to see the validity of Yelp's own ranking based on number of reviews and review stars.</h3>
+            <p>Since we wanted to distinguish what might differentiate the top restaurants from the weaker ones, we needed to find some sort of defining the feature. Upon further exploration, we find out that star rating isn't the attribute that best defines restaurants since the majority of the top restaurants are 4 stars. So, to solve this problem we decided to take the very ambiguous ranking algorithm that Yelp uses to determine more insight about the top restaurants. To do this we scraped the Yelp website for "Best Restaurants in Pittsburgh, Pa," to determine what they are. We only received the top 100 restaurants which are more than half of the total restaurants and the rest we gave them the same ranking. Because there are over a thousand, and that in itself might not be very descriptive we added bins of size 10 to minimize the top 1000 to the top 100 bins. Once, we matched all the bands to the corresponding restaurant, we explored and implore you to explore the relationship that the top restaurants have an average rating and a number of reviews. Using Tableau we explore this, and by selecting the bins you can see correlations, For example selecting groups 0 to 5, you  see how they are all in the top right. As you increase the size or go down the ranking group, the lower average number of reviews, and rating as well.</p>
+          </div>
         </div>
       </div>
 
@@ -246,25 +235,59 @@
       </div>
 
       <div class="row wow fadeInDown" data-wow-delay="200ms">
-        <div class="col-md-1"></div>
-        <div class="col-md-10">
-          <div class="about-text text-center">
-            <h1 class="viz-title">Exploring Categories and Checkin Times</h1>
-            <h3 class="viz-subtitle">We also used a Sankey to further explore times of day people tend to checkin to each category of restaurants.</h3>
-            <p>In the Sankey charts below we explore the connections of checking in regards to the top 15 categories in Pittsburgh, and the time of day. Below that is another Sankey chart that connects the top 15 categories and the time of day. We can see that there is some interesting connection to be made. For example, the most expected time to check in would have been expected to be at at either lunch time or dinner time, but as it turn out it was between 4:00 pm to 5:00 pm. Another insight we learned is that Thursday and Friday are the most popular check-in time. These insights are not only interesting but, can help any restaurant owner see when the most active yelp users are.</p>
-            <p>Both day of week and times of day data can be combined for users to find out when the restaurants should be at their best shape in order to achieve a higher rating/ranking.</p>
+        <div class="col-md-4">
+          <div class="about-text">
+            <h1 class="viz-title">Uber Rides By Day of Week</h1>
+            <h3 class="viz-subtitle">Then we wanted to explore if location had any impact on ranking of the restaurants.</h3>
+            <p>Lastly, we wanted to see if there was anything to be shown about the location of the restaurants. So using a map of Pittsburgh and their ranking you can explore where the top restaurants are, and where the not so high ranking restaurants are.</p>
           </div>
         </div>
-        <div class="col-md-1"></div>
-      </div>
-      <div class="row wow fadeInDown" data-wow-delay="200ms">
-        <div class="col-md-12 text-center"> 
-          <div id="chart2"></div>
+        <div class="col-md-8"> 
+          <div class='tableauPlaceholder' id='viz1488662255081' style='position: relative'><noscript><a href='#'><img alt='Day of Week ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ub&#47;Uber_Time_Vizualizations&#47;DayofWeek&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='site_root' value='' /><param name='name' value='Uber_Time_Vizualizations&#47;DayofWeek' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ub&#47;Uber_Time_Vizualizations&#47;DayofWeek&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1488662255081');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='754px';vizElement.style.height='669px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
         </div>
       </div>
+
+      <div class="section-title text-center center wow fadeInDown">
+        <hr>
+      </div>
+
+      <div class="row wow fadeInDown" data-wow-delay="200ms">
+        <div class="col-md-8"> 
+         <div class='tableauPlaceholder' id='viz1488662167408' style='position: relative'><noscript><a href='#'><img alt='Hour of Day ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ub&#47;Uber_Time_Vizualizations&#47;HourofDay&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='site_root' value='' /><param name='name' value='Uber_Time_Vizualizations&#47;HourofDay' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ub&#47;Uber_Time_Vizualizations&#47;HourofDay&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1488662167408');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='754px';vizElement.style.height='669px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+        </div>
+        <div class="col-md-4">
+          <div class="about-text">
+            <h1 class="viz-title">Uber Rides By Hour of Day</h1>
+            <h3 class="viz-subtitle">We first wanted to see the validity of Yelp's own ranking based on number of reviews and review stars.</h3>
+            <p>Since we wanted to distinguish what might differentiate the top restaurants from the weaker ones, we needed to find some sort of defining the feature. Upon further exploration, we find out that star rating isn't the attribute that best defines restaurants since the majority of the top restaurants are 4 stars. So, to solve this problem we decided to take the very ambiguous ranking algorithm that Yelp uses to determine more insight about the top restaurants. To do this we scraped the Yelp website for "Best Restaurants in Pittsburgh, Pa," to determine what they are. We only received the top 100 restaurants which are more than half of the total restaurants and the rest we gave them the same ranking. Because there are over a thousand, and that in itself might not be very descriptive we added bins of size 10 to minimize the top 1000 to the top 100 bins. Once, we matched all the bands to the corresponding restaurant, we explored and implore you to explore the relationship that the top restaurants have an average rating and a number of reviews. Using Tableau we explore this, and by selecting the bins you can see correlations, For example selecting groups 0 to 5, you  see how they are all in the top right. As you increase the size or go down the ranking group, the lower average number of reviews, and rating as well.</p>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="section-title text-center center wow fadeInDown">
+        <hr>
+      </div>
+
+      <div class="row wow fadeInDown" data-wow-delay="200ms">
+        <div class="col-md-4">
+          <div class="about-text">
+            <h1 class="viz-title">Uber Rides By Day of Week By Hour</h1>
+            <h3 class="viz-subtitle">Then we wanted to explore if location had any impact on ranking of the restaurants.</h3>
+            <p>Lastly, we wanted to see if there was anything to be shown about the location of the restaurants. So using a map of Pittsburgh and their ranking you can explore where the top restaurants are, and where the not so high ranking restaurants are.</p>
+          </div>
+        </div>
+        <div class="col-md-8"> 
+          <div id="sankey"></div>
+        </div>
+      </div>
+      
     </div>
   </div>
 </div>
+
+
+
 
 <!-- Services Section -->
 <div id="services-section" class="text-center">
