@@ -1,17 +1,197 @@
 <?xml version='1.0' encoding='utf-8' ?>
 
 <!-- build 10100.17.0207.2140                               -->
-<workbook source-build='10.1.5 (10100.17.0207.2140)' source-platform='win' version='10.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+<workbook source-build='10.1.5 (10100.17.0207.2140)' source-platform='win' version='10.1' xml:base='https://public.tableau.com' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <repository-location id='Uber_Time_Vizualizations' path='/workbooks' revision='1.0' />
   <preferences>
     <preference name='ui.encoding.shelf.height' value='24' />
     <preference name='ui.shelf.height' value='26' />
   </preferences>
   <datasources>
+    <datasource caption='uber_hour_of_day' inline='true' name='federated.04abxwr1j002jd10rw1ix17mtk72' version='10.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='uber_hour_of_day' name='excel-direct.1xv9sn91yp3syc16wryx81fdk6xu'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='C:\Users\Rick\Copy\CMU\Junior\67-364 Practical Data Science\UberDataScienceProject\visualizations\uber_hour_of_day.xlsx' interpretationMode='0' password='' server='' validate='no' workgroup-auth-mode='as-is' />
+          </named-connection>
+        </named-connections>
+        <relation connection='excel-direct.1xv9sn91yp3syc16wryx81fdk6xu' name='2014' table='[&apos;2014$&apos;]' type='table'>
+          <columns gridOrigin='A1:B25:no:A1:B25:0' header='yes' outcome='2'>
+            <column datatype='integer' name='F1' ordinal='0' />
+            <column datatype='integer' name='hour_of_day' ordinal='1' />
+          </columns>
+        </relation>
+        <refresh increment-key='' incremental-updates='false' />
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>F1</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[F1]</local-name>
+            <parent-name>[2014]</parent-name>
+            <remote-alias>F1</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>hour_of_day</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[hour_of_day]</local-name>
+            <parent-name>[2014]</parent-name>
+            <remote-alias>hour_of_day</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[2014]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:B25:no:A1:B25:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>2</attribute>
+            </attributes>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column aggregation='Sum' datatype='integer' name='[F1]' role='dimension' type='ordinal' />
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column caption='Hour Of Day' datatype='integer' name='[hour_of_day]' role='measure' type='quantitative' />
+      <extract count='-1' enabled='true' units='records'>
+        <connection class='dataengine' dbname='C:\Users\Rick\Documents\My Tableau Repository\Datasources\uber_hour_of_day.tde' schema='Extract' tablename='Extract' update-time='03/04/2017 01:38:48 AM'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <calculations>
+            <calculation column='[Number of Records]' formula='1' />
+          </calculations>
+          <refresh increment-key='' incremental-updates='false'>
+            <refresh-event add-from-file-path='' increment-value='%null%' refresh-type='create' rows-inserted='24' timestamp-start='2017-03-04 01:38:48.123' />
+          </refresh>
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>F1</remote-name>
+              <remote-type>16</remote-type>
+              <local-name>[F1]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>F1</remote-alias>
+              <ordinal>0</ordinal>
+              <family>2014</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>24</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Sum' datatype='real'>276.0</statistic>
+                <statistic aggregation='Avg' datatype='real'>11.5</statistic>
+                <statistic aggregation='Min' datatype='integer'>0</statistic>
+                <statistic aggregation='Max' datatype='integer'>23</statistic>
+                <statistic aggregation='Stdev' datatype='real'>7.0710678118654755</statistic>
+                <statistic aggregation='StdevP' datatype='real'>6.9221865524317288</statistic>
+                <statistic aggregation='Var' datatype='real'>50.0</statistic>
+                <statistic aggregation='VarP' datatype='real'>47.916666666666664</statistic>
+                <statistic aggregation='Count' datatype='integer'>24</statistic>
+                <statistic aggregation='Median' datatype='integer'>12</statistic>
+                <statistic aggregation='SumXSqr' datatype='real'>4324.0</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteMetadata (ordered)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>1</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (sort-position)'>0</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (sort-sense)'>&quot;asc&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (unique)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;sint8&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Number of Records</remote-name>
+              <remote-type>16</remote-type>
+              <local-name>[Number of Records]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Number of Records</remote-alias>
+              <ordinal>1</ordinal>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Sum' datatype='real'>24.0</statistic>
+                <statistic aggregation='Avg' datatype='real'>1.0</statistic>
+                <statistic aggregation='Min' datatype='integer'>1</statistic>
+                <statistic aggregation='Max' datatype='integer'>1</statistic>
+                <statistic aggregation='Stdev' datatype='real'>0.0</statistic>
+                <statistic aggregation='StdevP' datatype='real'>0.0</statistic>
+                <statistic aggregation='Var' datatype='real'>0.0</statistic>
+                <statistic aggregation='VarP' datatype='real'>0.0</statistic>
+                <statistic aggregation='Count' datatype='integer'>24</statistic>
+                <statistic aggregation='Median' datatype='integer'>1</statistic>
+                <statistic aggregation='SumXSqr' datatype='real'>24.0</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteMetadata (ordered)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>1</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;sint8&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>hour_of_day</remote-name>
+              <remote-type>3</remote-type>
+              <local-name>[hour_of_day]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>hour_of_day</remote-alias>
+              <ordinal>2</ordinal>
+              <family>2014</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>24</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Sum' datatype='real'>4534327.0</statistic>
+                <statistic aggregation='Avg' datatype='real'>188930.29166666666</statistic>
+                <statistic aggregation='Min' datatype='integer'>45865</statistic>
+                <statistic aggregation='Max' datatype='integer'>336190</statistic>
+                <statistic aggregation='Stdev' datatype='real'>91568.812007088374</statistic>
+                <statistic aggregation='StdevP' datatype='real'>89640.831620082216</statistic>
+                <statistic aggregation='Var' datatype='real'>8384847332.389493</statistic>
+                <statistic aggregation='VarP' datatype='real'>8035478693.5399303</statistic>
+                <statistic aggregation='Count' datatype='integer'>24</statistic>
+                <statistic aggregation='SumXSqr' datatype='real'>1049523211267.0</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (sort-position)'>1</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (sort-sense)'>&quot;asc&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (unique)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;sint32&quot;</attribute>
+              </attributes>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' dim-percentage='0.468657' measure-ordering='alphabetic' measure-percentage='0.531343' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+    </datasource>
     <datasource caption='2014 (uber_day_of_year)' inline='true' name='federated.0bpf6n30e5o3dd1e4pm8e0ekv0h4' version='10.1'>
       <connection class='federated'>
         <named-connections>
           <named-connection caption='uber_day_of_year' name='excel-direct.0or7paq0fvpjs115l5vf70w2dzhp'>
-            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='C:\Users\Rick\Copy\CMU\Junior\67-364 Practical Data Science\Project 1\UberDataScienceProject\visualizations\uber_day_of_year.xlsx' interpretationMode='0' password='' server='' validate='no' />
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='C:\Users\Rick\Copy\CMU\Junior\67-364 Practical Data Science\Project 1\UberDataScienceProject\visualizations\uber_day_of_year.xlsx' interpretationMode='0' password='' server='' validate='no' workgroup-auth-mode='as-is' />
           </named-connection>
         </named-connections>
         <relation connection='excel-direct.0or7paq0fvpjs115l5vf70w2dzhp' name='2014' table='[&apos;2014$&apos;]' type='table'>
@@ -20,6 +200,7 @@
             <column datatype='integer' name='day_of_year' ordinal='1' />
           </columns>
         </relation>
+        <refresh increment-key='' incremental-updates='false' />
         <metadata-records>
           <metadata-record class='column'>
             <remote-name>F1</remote-name>
@@ -71,6 +252,836 @@
         <calculation class='tableau' formula='1' />
       </column>
       <column caption='Day Of Year' datatype='integer' name='[day_of_year]' role='measure' type='quantitative' />
+      <extract count='-1' enabled='true' units='records'>
+        <connection class='dataengine' dbname='C:\Users\Rick\Documents\My Tableau Repository\Datasources\2014 (uber_day_of_year).tde' schema='Extract' tablename='Extract' update-time='03/04/2017 01:38:10 AM'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <calculations>
+            <calculation column='[Number of Records]' formula='1' />
+          </calculations>
+          <refresh increment-key='' incremental-updates='false'>
+            <refresh-event add-from-file-path='' increment-value='%null%' refresh-type='create' rows-inserted='183' timestamp-start='2017-03-04 01:38:10.410' />
+          </refresh>
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>F1</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[F1]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>F1</remote-alias>
+              <ordinal>0</ordinal>
+              <family>2014</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>183</approx-count>
+              <scale>1</scale>
+              <width>1073741823</width>
+              <contains-null>false</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <statistics>
+                <statistic aggregation='Min' datatype='string'>&quot;4/1/2014&quot;</statistic>
+                <statistic aggregation='Max' datatype='string'>&quot;9/9/2014&quot;</statistic>
+                <statistic aggregation='Count' datatype='integer'>183</statistic>
+                <statistic aggregation='Median' datatype='string'>&quot;7/1/2014&quot;</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US_CI&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (ordered)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (sort-position)'>0</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (sort-sense)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>2</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (unique)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Number of Records</remote-name>
+              <remote-type>16</remote-type>
+              <local-name>[Number of Records]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Number of Records</remote-alias>
+              <ordinal>1</ordinal>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Sum' datatype='real'>183.0</statistic>
+                <statistic aggregation='Avg' datatype='real'>1.0</statistic>
+                <statistic aggregation='Min' datatype='integer'>1</statistic>
+                <statistic aggregation='Max' datatype='integer'>1</statistic>
+                <statistic aggregation='Stdev' datatype='real'>0.0</statistic>
+                <statistic aggregation='StdevP' datatype='real'>0.0</statistic>
+                <statistic aggregation='Var' datatype='real'>0.0</statistic>
+                <statistic aggregation='VarP' datatype='real'>0.0</statistic>
+                <statistic aggregation='Count' datatype='integer'>183</statistic>
+                <statistic aggregation='Median' datatype='integer'>1</statistic>
+                <statistic aggregation='SumXSqr' datatype='real'>183.0</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteMetadata (ordered)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>1</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;sint8&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>day_of_year</remote-name>
+              <remote-type>3</remote-type>
+              <local-name>[day_of_year]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>day_of_year</remote-alias>
+              <ordinal>2</ordinal>
+              <family>2014</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>183</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Sum' datatype='real'>4534327.0</statistic>
+                <statistic aggregation='Avg' datatype='real'>24777.743169398906</statistic>
+                <statistic aggregation='Min' datatype='integer'>10202</statistic>
+                <statistic aggregation='Max' datatype='integer'>43205</statistic>
+                <statistic aggregation='Stdev' datatype='real'>7058.6716759798373</statistic>
+                <statistic aggregation='StdevP' datatype='real'>7039.3592685826252</statistic>
+                <statistic aggregation='Var' datatype='real'>49824845.829280011</statistic>
+                <statistic aggregation='VarP' datatype='real'>49552578.912180118</statistic>
+                <statistic aggregation='Count' datatype='integer'>183</statistic>
+                <statistic aggregation='SumXSqr' datatype='real'>121418511793.0</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (sort-position)'>1</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (sort-sense)'>&quot;asc&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (unique)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;sint32&quot;</attribute>
+              </attributes>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' dim-percentage='0.468657' measure-ordering='alphabetic' measure-percentage='0.531343' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+    </datasource>
+    <datasource caption='2014 (uber_day_of_week)' inline='true' name='federated.0nlz9eg1yjoiwq12ntumh19kcn7m' version='10.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='uber_day_of_week' name='excel-direct.12vs7bv1k1oyc51bxizw91g2u7wq'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='C:\Users\Rick\Copy\CMU\Junior\67-364 Practical Data Science\UberDataScienceProject\visualizations\uber_day_of_week.xlsx' interpretationMode='0' password='' server='' validate='no' workgroup-auth-mode='as-is' />
+          </named-connection>
+        </named-connections>
+        <relation connection='excel-direct.12vs7bv1k1oyc51bxizw91g2u7wq' name='2014' table='[&apos;2014$&apos;]' type='table'>
+          <columns gridOrigin='A1:B8:no:A1:B8:0' header='yes' outcome='2'>
+            <column datatype='string' name='F1' ordinal='0' />
+            <column datatype='integer' name='day_of_week' ordinal='1' />
+          </columns>
+        </relation>
+        <refresh increment-key='' incremental-updates='false' />
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>F1</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[F1]</local-name>
+            <parent-name>[2014]</parent-name>
+            <remote-alias>F1</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>day_of_week</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[day_of_week]</local-name>
+            <parent-name>[2014]</parent-name>
+            <remote-alias>day_of_week</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[2014]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:B8:no:A1:B8:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>2</attribute>
+            </attributes>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column caption='Day Of Week' datatype='integer' name='[day_of_week]' role='measure' type='quantitative' />
+      <extract count='-1' enabled='true' units='records'>
+        <connection class='dataengine' dbname='C:\Users\Rick\Documents\My Tableau Repository\Datasources\2014 (uber_day_of_week).tde' schema='Extract' tablename='Extract' update-time='03/04/2017 01:38:05 AM'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <calculations>
+            <calculation column='[Number of Records]' formula='1' />
+          </calculations>
+          <refresh increment-key='' incremental-updates='false'>
+            <refresh-event add-from-file-path='' increment-value='%null%' refresh-type='create' rows-inserted='7' timestamp-start='2017-03-04 01:38:05.095' />
+          </refresh>
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>F1</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[F1]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>F1</remote-alias>
+              <ordinal>0</ordinal>
+              <family>2014</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>7</approx-count>
+              <scale>1</scale>
+              <width>1073741823</width>
+              <contains-null>false</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <statistics>
+                <statistic aggregation='Min' datatype='string'>&quot;Fri&quot;</statistic>
+                <statistic aggregation='Max' datatype='string'>&quot;Wed&quot;</statistic>
+                <statistic aggregation='Count' datatype='integer'>7</statistic>
+                <statistic aggregation='Median' datatype='string'>&quot;Sun&quot;</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US_CI&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (ordered)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (sort-position)'>0</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (sort-sense)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>1</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (unique)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Number of Records</remote-name>
+              <remote-type>16</remote-type>
+              <local-name>[Number of Records]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Number of Records</remote-alias>
+              <ordinal>1</ordinal>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Sum' datatype='real'>7.0</statistic>
+                <statistic aggregation='Avg' datatype='real'>1.0</statistic>
+                <statistic aggregation='Min' datatype='integer'>1</statistic>
+                <statistic aggregation='Max' datatype='integer'>1</statistic>
+                <statistic aggregation='Stdev' datatype='real'>0.0</statistic>
+                <statistic aggregation='StdevP' datatype='real'>0.0</statistic>
+                <statistic aggregation='Var' datatype='real'>0.0</statistic>
+                <statistic aggregation='VarP' datatype='real'>0.0</statistic>
+                <statistic aggregation='Count' datatype='integer'>7</statistic>
+                <statistic aggregation='Median' datatype='integer'>1</statistic>
+                <statistic aggregation='SumXSqr' datatype='real'>7.0</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteMetadata (ordered)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>1</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;sint8&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>day_of_week</remote-name>
+              <remote-type>3</remote-type>
+              <local-name>[day_of_week]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>day_of_week</remote-alias>
+              <ordinal>2</ordinal>
+              <family>2014</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>7</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Sum' datatype='real'>4534327.0</statistic>
+                <statistic aggregation='Avg' datatype='real'>647761.0</statistic>
+                <statistic aggregation='Min' datatype='integer'>490180</statistic>
+                <statistic aggregation='Max' datatype='integer'>755145</statistic>
+                <statistic aggregation='Stdev' datatype='real'>99174.78455064405</statistic>
+                <statistic aggregation='StdevP' datatype='real'>91818.008927598581</statistic>
+                <statistic aggregation='Var' datatype='real'>9835637890.666666</statistic>
+                <statistic aggregation='VarP' datatype='real'>8430546763.4285717</statistic>
+                <statistic aggregation='Count' datatype='integer'>7</statistic>
+                <statistic aggregation='Median' datatype='integer'>646114</statistic>
+                <statistic aggregation='SumXSqr' datatype='real'>2996174019191.0</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (sort-position)'>1</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (sort-sense)'>&quot;asc&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (unique)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;sint32&quot;</attribute>
+              </attributes>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' dim-percentage='0.468657' measure-ordering='alphabetic' measure-percentage='0.531343' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+    </datasource>
+    <datasource caption='2015 (uber_hour_of_day)' inline='true' name='federated.0tsq7881qgg60z18gjeov01s9lqz' version='10.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='uber_hour_of_day' name='excel-direct.0pesnfg13i8dob14p4rc81vpjfh3'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='C:\Users\Rick\Copy\CMU\Junior\67-364 Practical Data Science\UberDataScienceProject\visualizations\uber_hour_of_day.xlsx' interpretationMode='0' password='' server='' validate='no' workgroup-auth-mode='as-is' />
+          </named-connection>
+        </named-connections>
+        <relation connection='excel-direct.0pesnfg13i8dob14p4rc81vpjfh3' name='2015' table='[&apos;2015$&apos;]' type='table'>
+          <columns gridOrigin='A1:B25:no:A1:B25:0' header='yes' outcome='2'>
+            <column datatype='integer' name='F1' ordinal='0' />
+            <column datatype='integer' name='hour_of_day' ordinal='1' />
+          </columns>
+        </relation>
+        <refresh increment-key='' incremental-updates='false' />
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>F1</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[F1]</local-name>
+            <parent-name>[2015]</parent-name>
+            <remote-alias>F1</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>hour_of_day</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[hour_of_day]</local-name>
+            <parent-name>[2015]</parent-name>
+            <remote-alias>hour_of_day</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[2015]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:B25:no:A1:B25:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>2</attribute>
+            </attributes>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column aggregation='Sum' datatype='integer' name='[F1]' role='dimension' type='ordinal' />
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column caption='Hour Of Day' datatype='integer' name='[hour_of_day]' role='measure' type='quantitative' />
+      <extract count='-1' enabled='true' units='records'>
+        <connection class='dataengine' dbname='C:\Users\Rick\Documents\My Tableau Repository\Datasources\2015 (uber_hour_of_day).tde' schema='Extract' tablename='Extract' update-time='03/04/2017 01:38:41 AM'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <calculations>
+            <calculation column='[Number of Records]' formula='1' />
+          </calculations>
+          <refresh increment-key='' incremental-updates='false'>
+            <refresh-event add-from-file-path='' increment-value='%null%' refresh-type='create' rows-inserted='24' timestamp-start='2017-03-04 01:38:41.683' />
+          </refresh>
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>F1</remote-name>
+              <remote-type>16</remote-type>
+              <local-name>[F1]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>F1</remote-alias>
+              <ordinal>0</ordinal>
+              <family>2015</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>24</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Sum' datatype='real'>276.0</statistic>
+                <statistic aggregation='Avg' datatype='real'>11.5</statistic>
+                <statistic aggregation='Min' datatype='integer'>0</statistic>
+                <statistic aggregation='Max' datatype='integer'>23</statistic>
+                <statistic aggregation='Stdev' datatype='real'>7.0710678118654755</statistic>
+                <statistic aggregation='StdevP' datatype='real'>6.9221865524317288</statistic>
+                <statistic aggregation='Var' datatype='real'>50.0</statistic>
+                <statistic aggregation='VarP' datatype='real'>47.916666666666664</statistic>
+                <statistic aggregation='Count' datatype='integer'>24</statistic>
+                <statistic aggregation='Median' datatype='integer'>12</statistic>
+                <statistic aggregation='SumXSqr' datatype='real'>4324.0</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteMetadata (ordered)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>1</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (sort-position)'>0</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (sort-sense)'>&quot;asc&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (unique)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;sint8&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Number of Records</remote-name>
+              <remote-type>16</remote-type>
+              <local-name>[Number of Records]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Number of Records</remote-alias>
+              <ordinal>1</ordinal>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Sum' datatype='real'>24.0</statistic>
+                <statistic aggregation='Avg' datatype='real'>1.0</statistic>
+                <statistic aggregation='Min' datatype='integer'>1</statistic>
+                <statistic aggregation='Max' datatype='integer'>1</statistic>
+                <statistic aggregation='Stdev' datatype='real'>0.0</statistic>
+                <statistic aggregation='StdevP' datatype='real'>0.0</statistic>
+                <statistic aggregation='Var' datatype='real'>0.0</statistic>
+                <statistic aggregation='VarP' datatype='real'>0.0</statistic>
+                <statistic aggregation='Count' datatype='integer'>24</statistic>
+                <statistic aggregation='Median' datatype='integer'>1</statistic>
+                <statistic aggregation='SumXSqr' datatype='real'>24.0</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteMetadata (ordered)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>1</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;sint8&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>hour_of_day</remote-name>
+              <remote-type>3</remote-type>
+              <local-name>[hour_of_day]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>hour_of_day</remote-alias>
+              <ordinal>2</ordinal>
+              <family>2015</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>24</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Sum' datatype='real'>14270479.0</statistic>
+                <statistic aggregation='Avg' datatype='real'>594603.29166666663</statistic>
+                <statistic aggregation='Min' datatype='integer'>173038</statistic>
+                <statistic aggregation='Max' datatype='integer'>1007464</statistic>
+                <statistic aggregation='Stdev' datatype='real'>264514.26027564582</statistic>
+                <statistic aggregation='StdevP' datatype='real'>258944.91526923238</statistic>
+                <statistic aggregation='Var' datatype='real'>69967793889.172104</statistic>
+                <statistic aggregation='VarP' datatype='real'>67052469143.789932</statistic>
+                <statistic aggregation='Count' datatype='integer'>24</statistic>
+                <statistic aggregation='SumXSqr' datatype='real'>10094533046511.0</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (sort-position)'>1</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (sort-sense)'>&quot;asc&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (unique)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;sint32&quot;</attribute>
+              </attributes>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' dim-percentage='0.468657' measure-ordering='alphabetic' measure-percentage='0.531343' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+    </datasource>
+    <datasource caption='2014 (uber_avg_day_of_month)' inline='true' name='federated.10ujuh91tfcw4e165w3x916tdsmq' version='10.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='uber_avg_day_of_month' name='excel-direct.0vp1khp0bnvyjq131829r1d7gvxn'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='C:\Users\Rick\Copy\CMU\Junior\67-364 Practical Data Science\Project 1\UberDataScienceProject\visualizations\uber_avg_day_of_month.xlsx' interpretationMode='0' password='' server='' validate='no' workgroup-auth-mode='as-is' />
+          </named-connection>
+        </named-connections>
+        <relation connection='excel-direct.0vp1khp0bnvyjq131829r1d7gvxn' name='2014' table='[&apos;2014$&apos;]' type='table'>
+          <columns gridOrigin='A1:B32:no:A1:B32:0' header='yes' outcome='6'>
+            <column datatype='integer' name='avg_day_of_month' ordinal='0' />
+            <column datatype='real' name='rides' ordinal='1' />
+          </columns>
+        </relation>
+        <refresh increment-key='' incremental-updates='false' />
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>avg_day_of_month</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[avg_day_of_month]</local-name>
+            <parent-name>[2014]</parent-name>
+            <remote-alias>avg_day_of_month</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>rides</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[rides]</local-name>
+            <parent-name>[2014]</parent-name>
+            <remote-alias>rides</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[2014]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:B32:no:A1:B32:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>6</attribute>
+            </attributes>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column caption='Avg Day Of Month' datatype='integer' name='[avg_day_of_month]' role='dimension' type='quantitative' />
+      <column caption='Rides' datatype='real' name='[rides]' role='measure' type='quantitative' />
+      <extract count='-1' enabled='true' units='records'>
+        <connection class='dataengine' dbname='C:\Users\Rick\Documents\My Tableau Repository\Datasources\2014 (uber_avg_day_of_month).tde' schema='Extract' tablename='Extract' update-time='03/04/2017 01:37:42 AM'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <calculations>
+            <calculation column='[Number of Records]' formula='1' />
+          </calculations>
+          <refresh increment-key='' incremental-updates='false'>
+            <refresh-event add-from-file-path='' increment-value='%null%' refresh-type='create' rows-inserted='31' timestamp-start='2017-03-04 01:37:42.807' />
+          </refresh>
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>Number of Records</remote-name>
+              <remote-type>16</remote-type>
+              <local-name>[Number of Records]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Number of Records</remote-alias>
+              <ordinal>0</ordinal>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Sum' datatype='real'>31.0</statistic>
+                <statistic aggregation='Avg' datatype='real'>1.0</statistic>
+                <statistic aggregation='Min' datatype='integer'>1</statistic>
+                <statistic aggregation='Max' datatype='integer'>1</statistic>
+                <statistic aggregation='Stdev' datatype='real'>0.0</statistic>
+                <statistic aggregation='StdevP' datatype='real'>0.0</statistic>
+                <statistic aggregation='Var' datatype='real'>0.0</statistic>
+                <statistic aggregation='VarP' datatype='real'>0.0</statistic>
+                <statistic aggregation='Count' datatype='integer'>31</statistic>
+                <statistic aggregation='Median' datatype='integer'>1</statistic>
+                <statistic aggregation='SumXSqr' datatype='real'>31.0</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteMetadata (ordered)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>1</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;sint8&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>avg_day_of_month</remote-name>
+              <remote-type>16</remote-type>
+              <local-name>[avg_day_of_month]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>avg_day_of_month</remote-alias>
+              <ordinal>1</ordinal>
+              <family>2014</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>31</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Sum' datatype='real'>496.0</statistic>
+                <statistic aggregation='Avg' datatype='real'>16.0</statistic>
+                <statistic aggregation='Min' datatype='integer'>1</statistic>
+                <statistic aggregation='Max' datatype='integer'>31</statistic>
+                <statistic aggregation='Stdev' datatype='real'>9.0921211313239034</statistic>
+                <statistic aggregation='StdevP' datatype='real'>8.9442719099991592</statistic>
+                <statistic aggregation='Var' datatype='real'>82.666666666666671</statistic>
+                <statistic aggregation='VarP' datatype='real'>80.0</statistic>
+                <statistic aggregation='Count' datatype='integer'>31</statistic>
+                <statistic aggregation='Median' datatype='integer'>16</statistic>
+                <statistic aggregation='SumXSqr' datatype='real'>10416.0</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteMetadata (ordered)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>1</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (sort-position)'>0</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (sort-sense)'>&quot;asc&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (unique)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;sint8&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>rides</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[rides]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>rides</remote-alias>
+              <ordinal>2</ordinal>
+              <family>2014</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>31</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Sum' datatype='real'>768733.33333333337</statistic>
+                <statistic aggregation='Avg' datatype='real'>24797.849462365593</statistic>
+                <statistic aggregation='Min' datatype='real'>21238.333333333328</statistic>
+                <statistic aggregation='Max' datatype='real'>27860.0</statistic>
+                <statistic aggregation='Stdev' datatype='real'>1310.3890483609762</statistic>
+                <statistic aggregation='StdevP' datatype='real'>1289.0804892652141</statistic>
+                <statistic aggregation='Var' datatype='real'>1717119.4580643848</statistic>
+                <statistic aggregation='VarP' datatype='real'>1661728.5078042434</statistic>
+                <statistic aggregation='Count' datatype='integer'>31</statistic>
+                <statistic aggregation='SumXSqr' datatype='real'>19114447060.444443</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (sort-position)'>1</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (sort-sense)'>&quot;asc&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (unique)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;double&quot;</attribute>
+              </attributes>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' dim-percentage='0.468657' measure-ordering='alphabetic' measure-percentage='0.531343' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+    </datasource>
+    <datasource caption='2015 (uber_avg_day_of_month)' inline='true' name='federated.196sma7073i3xq1gzjvht1d0g74u' version='10.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='uber_avg_day_of_month' name='excel-direct.1o0pfez0l6ny4y1cd2mpt0jf921w'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='C:\Users\Rick\Copy\CMU\Junior\67-364 Practical Data Science\Project 1\UberDataScienceProject\visualizations\uber_avg_day_of_month.xlsx' interpretationMode='0' password='' server='' validate='no' workgroup-auth-mode='as-is' />
+          </named-connection>
+        </named-connections>
+        <relation connection='excel-direct.1o0pfez0l6ny4y1cd2mpt0jf921w' name='2015' table='[&apos;2015$&apos;]' type='table'>
+          <columns gridOrigin='A1:B32:no:A1:B32:0' header='yes' outcome='6'>
+            <column datatype='integer' name='avg_day_of_month' ordinal='0' />
+            <column datatype='real' name='rides' ordinal='1' />
+          </columns>
+        </relation>
+        <refresh increment-key='' incremental-updates='false' />
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>avg_day_of_month</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[avg_day_of_month]</local-name>
+            <parent-name>[2015]</parent-name>
+            <remote-alias>avg_day_of_month</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>rides</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[rides]</local-name>
+            <parent-name>[2015]</parent-name>
+            <remote-alias>rides</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[2015]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:B32:no:A1:B32:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>6</attribute>
+            </attributes>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column caption='Avg Day Of Month' datatype='integer' name='[avg_day_of_month]' role='dimension' type='quantitative' />
+      <column caption='Rides' datatype='real' name='[rides]' role='measure' type='quantitative' />
+      <extract count='-1' enabled='true' units='records'>
+        <connection class='dataengine' dbname='C:\Users\Rick\Documents\My Tableau Repository\Datasources\2015 (uber_avg_day_of_month).tde' schema='Extract' tablename='Extract' update-time='03/04/2017 01:38:17 AM'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <calculations>
+            <calculation column='[Number of Records]' formula='1' />
+          </calculations>
+          <refresh increment-key='' incremental-updates='false'>
+            <refresh-event add-from-file-path='' increment-value='%null%' refresh-type='create' rows-inserted='31' timestamp-start='2017-03-04 01:38:17.187' />
+          </refresh>
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>Number of Records</remote-name>
+              <remote-type>16</remote-type>
+              <local-name>[Number of Records]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Number of Records</remote-alias>
+              <ordinal>0</ordinal>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Sum' datatype='real'>31.0</statistic>
+                <statistic aggregation='Avg' datatype='real'>1.0</statistic>
+                <statistic aggregation='Min' datatype='integer'>1</statistic>
+                <statistic aggregation='Max' datatype='integer'>1</statistic>
+                <statistic aggregation='Stdev' datatype='real'>0.0</statistic>
+                <statistic aggregation='StdevP' datatype='real'>0.0</statistic>
+                <statistic aggregation='Var' datatype='real'>0.0</statistic>
+                <statistic aggregation='VarP' datatype='real'>0.0</statistic>
+                <statistic aggregation='Count' datatype='integer'>31</statistic>
+                <statistic aggregation='Median' datatype='integer'>1</statistic>
+                <statistic aggregation='SumXSqr' datatype='real'>31.0</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteMetadata (ordered)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>1</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;sint8&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>avg_day_of_month</remote-name>
+              <remote-type>16</remote-type>
+              <local-name>[avg_day_of_month]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>avg_day_of_month</remote-alias>
+              <ordinal>1</ordinal>
+              <family>2015</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>31</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Sum' datatype='real'>496.0</statistic>
+                <statistic aggregation='Avg' datatype='real'>16.0</statistic>
+                <statistic aggregation='Min' datatype='integer'>1</statistic>
+                <statistic aggregation='Max' datatype='integer'>31</statistic>
+                <statistic aggregation='Stdev' datatype='real'>9.0921211313239034</statistic>
+                <statistic aggregation='StdevP' datatype='real'>8.9442719099991592</statistic>
+                <statistic aggregation='Var' datatype='real'>82.666666666666671</statistic>
+                <statistic aggregation='VarP' datatype='real'>80.0</statistic>
+                <statistic aggregation='Count' datatype='integer'>31</statistic>
+                <statistic aggregation='Median' datatype='integer'>16</statistic>
+                <statistic aggregation='SumXSqr' datatype='real'>10416.0</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteMetadata (ordered)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>1</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (sort-position)'>0</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (sort-sense)'>&quot;asc&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (unique)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;sint8&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>rides</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[rides]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>rides</remote-alias>
+              <ordinal>2</ordinal>
+              <family>2015</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>31</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Sum' datatype='real'>2450607.5</statistic>
+                <statistic aggregation='Avg' datatype='real'>79051.854838709682</statistic>
+                <statistic aggregation='Min' datatype='real'>68628.333333333328</statistic>
+                <statistic aggregation='Max' datatype='real'>90096.0</statistic>
+                <statistic aggregation='Stdev' datatype='real'>4449.4199805062717</statistic>
+                <statistic aggregation='StdevP' datatype='real'>4377.0668662040171</statistic>
+                <statistic aggregation='Var' datatype='real'>19797338.162928429</statistic>
+                <statistic aggregation='VarP' datatype='real'>19158714.351221059</statistic>
+                <statistic aggregation='Count' datatype='integer'>31</statistic>
+                <statistic aggregation='SumXSqr' datatype='real'>194318988501.54108</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (sort-position)'>1</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (sort-sense)'>&quot;asc&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (unique)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;double&quot;</attribute>
+              </attributes>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
       <layout dim-ordering='alphabetic' dim-percentage='0.468657' measure-ordering='alphabetic' measure-percentage='0.531343' show-structure='true' />
       <semantic-values>
         <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
@@ -80,7 +1091,7 @@
       <connection class='federated'>
         <named-connections>
           <named-connection caption='uber_day_of_year' name='excel-direct.0hvzmar0tbkqae185kllj1ti9vte'>
-            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='C:\Users\Rick\Copy\CMU\Junior\67-364 Practical Data Science\Project 1\UberDataScienceProject\visualizations\uber_day_of_year.xlsx' interpretationMode='0' password='' server='' validate='no' />
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='C:\Users\Rick\Copy\CMU\Junior\67-364 Practical Data Science\Project 1\UberDataScienceProject\visualizations\uber_day_of_year.xlsx' interpretationMode='0' password='' server='' validate='no' workgroup-auth-mode='as-is' />
           </named-connection>
         </named-connections>
         <relation connection='excel-direct.0hvzmar0tbkqae185kllj1ti9vte' name='2015' table='[&apos;2015$&apos;]' type='table'>
@@ -89,6 +1100,7 @@
             <column datatype='integer' name='day_of_year' ordinal='1' />
           </columns>
         </relation>
+        <refresh increment-key='' incremental-updates='false' />
         <metadata-records>
           <metadata-record class='column'>
             <remote-name>F1</remote-name>
@@ -140,216 +1152,117 @@
         <calculation class='tableau' formula='1' />
       </column>
       <column caption='Day Of Year' datatype='integer' name='[day_of_year]' role='measure' type='quantitative' />
+      <extract count='-1' enabled='true' units='records'>
+        <connection class='dataengine' dbname='C:\Users\Rick\Documents\My Tableau Repository\Datasources\2015 (uber_day_of_year).tde' schema='Extract' tablename='Extract' update-time='03/04/2017 01:38:34 AM'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <calculations>
+            <calculation column='[Number of Records]' formula='1' />
+          </calculations>
+          <refresh increment-key='' incremental-updates='false'>
+            <refresh-event add-from-file-path='' increment-value='%null%' refresh-type='create' rows-inserted='181' timestamp-start='2017-03-04 01:38:34.928' />
+          </refresh>
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>F1</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[F1]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>F1</remote-alias>
+              <ordinal>0</ordinal>
+              <family>2015</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>181</approx-count>
+              <scale>1</scale>
+              <width>1073741823</width>
+              <contains-null>false</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <statistics>
+                <statistic aggregation='Min' datatype='string'>&quot;2015-01-01&quot;</statistic>
+                <statistic aggregation='Max' datatype='string'>&quot;2015-06-30&quot;</statistic>
+                <statistic aggregation='Count' datatype='integer'>181</statistic>
+                <statistic aggregation='Median' datatype='string'>&quot;2015-04-01&quot;</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US_CI&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (ordered)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (sort-position)'>0</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (sort-sense)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>2</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (unique)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Number of Records</remote-name>
+              <remote-type>16</remote-type>
+              <local-name>[Number of Records]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Number of Records</remote-alias>
+              <ordinal>1</ordinal>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Sum' datatype='real'>181.0</statistic>
+                <statistic aggregation='Avg' datatype='real'>1.0</statistic>
+                <statistic aggregation='Min' datatype='integer'>1</statistic>
+                <statistic aggregation='Max' datatype='integer'>1</statistic>
+                <statistic aggregation='Stdev' datatype='real'>0.0</statistic>
+                <statistic aggregation='StdevP' datatype='real'>0.0</statistic>
+                <statistic aggregation='Var' datatype='real'>0.0</statistic>
+                <statistic aggregation='VarP' datatype='real'>0.0</statistic>
+                <statistic aggregation='Count' datatype='integer'>181</statistic>
+                <statistic aggregation='Median' datatype='integer'>1</statistic>
+                <statistic aggregation='SumXSqr' datatype='real'>181.0</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteMetadata (ordered)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>1</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;sint8&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>day_of_year</remote-name>
+              <remote-type>3</remote-type>
+              <local-name>[day_of_year]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>day_of_year</remote-alias>
+              <ordinal>2</ordinal>
+              <family>2015</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>181</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Sum' datatype='real'>14270479.0</statistic>
+                <statistic aggregation='Avg' datatype='real'>78842.425414364639</statistic>
+                <statistic aggregation='Min' datatype='integer'>25954</statistic>
+                <statistic aggregation='Max' datatype='integer'>136193</statistic>
+                <statistic aggregation='Stdev' datatype='real'>15843.566534198439</statistic>
+                <statistic aggregation='StdevP' datatype='real'>15799.739156921465</statistic>
+                <statistic aggregation='Var' datatype='real'>251018600.52357274</statistic>
+                <statistic aggregation='VarP' datatype='real'>249631757.42675743</statistic>
+                <statistic aggregation='Count' datatype='integer'>181</statistic>
+                <statistic aggregation='SumXSqr' datatype='real'>1170302524279.0</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (sort-position)'>1</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (sort-sense)'>&quot;asc&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (unique)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;sint32&quot;</attribute>
+              </attributes>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
       <layout dim-ordering='alphabetic' dim-percentage='0.468657' measure-ordering='alphabetic' measure-percentage='0.531343' show-structure='true' />
-      <semantic-values>
-        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
-      </semantic-values>
-    </datasource>
-    <datasource caption='2014 (uber_avg_day_of_month)' inline='true' name='federated.10ujuh91tfcw4e165w3x916tdsmq' version='10.1'>
-      <connection class='federated'>
-        <named-connections>
-          <named-connection caption='uber_avg_day_of_month' name='excel-direct.0vp1khp0bnvyjq131829r1d7gvxn'>
-            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='C:\Users\Rick\Copy\CMU\Junior\67-364 Practical Data Science\Project 1\UberDataScienceProject\visualizations\uber_avg_day_of_month.xlsx' interpretationMode='0' password='' server='' validate='no' />
-          </named-connection>
-        </named-connections>
-        <relation connection='excel-direct.0vp1khp0bnvyjq131829r1d7gvxn' name='2014' table='[&apos;2014$&apos;]' type='table'>
-          <columns gridOrigin='A1:B32:no:A1:B32:0' header='yes' outcome='6'>
-            <column datatype='integer' name='avg_day_of_month' ordinal='0' />
-            <column datatype='real' name='rides' ordinal='1' />
-          </columns>
-        </relation>
-        <metadata-records>
-          <metadata-record class='column'>
-            <remote-name>avg_day_of_month</remote-name>
-            <remote-type>20</remote-type>
-            <local-name>[avg_day_of_month]</local-name>
-            <parent-name>[2014]</parent-name>
-            <remote-alias>avg_day_of_month</remote-alias>
-            <ordinal>0</ordinal>
-            <local-type>integer</local-type>
-            <aggregation>Sum</aggregation>
-            <contains-null>true</contains-null>
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
-            </attributes>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>rides</remote-name>
-            <remote-type>5</remote-type>
-            <local-name>[rides]</local-name>
-            <parent-name>[2014]</parent-name>
-            <remote-alias>rides</remote-alias>
-            <ordinal>1</ordinal>
-            <local-type>real</local-type>
-            <aggregation>Sum</aggregation>
-            <precision>15</precision>
-            <contains-null>true</contains-null>
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
-            </attributes>
-          </metadata-record>
-          <metadata-record class='capability'>
-            <remote-name />
-            <remote-type>0</remote-type>
-            <parent-name>[2014]</parent-name>
-            <remote-alias />
-            <aggregation>Count</aggregation>
-            <contains-null>true</contains-null>
-            <attributes>
-              <attribute datatype='integer' name='context'>0</attribute>
-              <attribute datatype='string' name='gridOrigin'>&quot;A1:B32:no:A1:B32:0&quot;</attribute>
-              <attribute datatype='boolean' name='header'>true</attribute>
-              <attribute datatype='integer' name='outcome'>6</attribute>
-            </attributes>
-          </metadata-record>
-        </metadata-records>
-      </connection>
-      <aliases enabled='yes' />
-      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
-        <calculation class='tableau' formula='1' />
-      </column>
-      <column caption='Avg Day Of Month' datatype='integer' name='[avg_day_of_month]' role='dimension' type='quantitative' />
-      <column caption='Rides' datatype='real' name='[rides]' role='measure' type='quantitative' />
-      <layout dim-ordering='alphabetic' dim-percentage='0.47494' measure-ordering='alphabetic' measure-percentage='0.52506' show-structure='true' />
-      <semantic-values>
-        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
-      </semantic-values>
-    </datasource>
-    <datasource caption='2015 (uber_avg_day_of_month)' inline='true' name='federated.196sma7073i3xq1gzjvht1d0g74u' version='10.1'>
-      <connection class='federated'>
-        <named-connections>
-          <named-connection caption='uber_avg_day_of_month' name='excel-direct.1o0pfez0l6ny4y1cd2mpt0jf921w'>
-            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='C:\Users\Rick\Copy\CMU\Junior\67-364 Practical Data Science\Project 1\UberDataScienceProject\visualizations\uber_avg_day_of_month.xlsx' interpretationMode='0' password='' server='' validate='no' />
-          </named-connection>
-        </named-connections>
-        <relation connection='excel-direct.1o0pfez0l6ny4y1cd2mpt0jf921w' name='2015' table='[&apos;2015$&apos;]' type='table'>
-          <columns gridOrigin='A1:B32:no:A1:B32:0' header='yes' outcome='6'>
-            <column datatype='integer' name='avg_day_of_month' ordinal='0' />
-            <column datatype='real' name='rides' ordinal='1' />
-          </columns>
-        </relation>
-        <metadata-records>
-          <metadata-record class='column'>
-            <remote-name>avg_day_of_month</remote-name>
-            <remote-type>20</remote-type>
-            <local-name>[avg_day_of_month]</local-name>
-            <parent-name>[2015]</parent-name>
-            <remote-alias>avg_day_of_month</remote-alias>
-            <ordinal>0</ordinal>
-            <local-type>integer</local-type>
-            <aggregation>Sum</aggregation>
-            <contains-null>true</contains-null>
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
-            </attributes>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>rides</remote-name>
-            <remote-type>5</remote-type>
-            <local-name>[rides]</local-name>
-            <parent-name>[2015]</parent-name>
-            <remote-alias>rides</remote-alias>
-            <ordinal>1</ordinal>
-            <local-type>real</local-type>
-            <aggregation>Sum</aggregation>
-            <precision>15</precision>
-            <contains-null>true</contains-null>
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
-            </attributes>
-          </metadata-record>
-          <metadata-record class='capability'>
-            <remote-name />
-            <remote-type>0</remote-type>
-            <parent-name>[2015]</parent-name>
-            <remote-alias />
-            <aggregation>Count</aggregation>
-            <contains-null>true</contains-null>
-            <attributes>
-              <attribute datatype='integer' name='context'>0</attribute>
-              <attribute datatype='string' name='gridOrigin'>&quot;A1:B32:no:A1:B32:0&quot;</attribute>
-              <attribute datatype='boolean' name='header'>true</attribute>
-              <attribute datatype='integer' name='outcome'>6</attribute>
-            </attributes>
-          </metadata-record>
-        </metadata-records>
-      </connection>
-      <aliases enabled='yes' />
-      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
-        <calculation class='tableau' formula='1' />
-      </column>
-      <column caption='Avg Day Of Month' datatype='integer' name='[avg_day_of_month]' role='dimension' type='quantitative' />
-      <column caption='Rides' datatype='real' name='[rides]' role='measure' type='quantitative' />
-      <layout dim-ordering='alphabetic' dim-percentage='0.47494' measure-ordering='alphabetic' measure-percentage='0.52506' show-structure='true' />
-      <semantic-values>
-        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
-      </semantic-values>
-    </datasource>
-    <datasource caption='2014 (uber_day_of_week)' inline='true' name='federated.0nlz9eg1yjoiwq12ntumh19kcn7m' version='10.1'>
-      <connection class='federated'>
-        <named-connections>
-          <named-connection caption='uber_day_of_week' name='excel-direct.12vs7bv1k1oyc51bxizw91g2u7wq'>
-            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='C:\Users\Rick\Copy\CMU\Junior\67-364 Practical Data Science\UberDataScienceProject\visualizations\uber_day_of_week.xlsx' interpretationMode='0' password='' server='' validate='no' />
-          </named-connection>
-        </named-connections>
-        <relation connection='excel-direct.12vs7bv1k1oyc51bxizw91g2u7wq' name='2014' table='[&apos;2014$&apos;]' type='table'>
-          <columns gridOrigin='A1:B8:no:A1:B8:0' header='yes' outcome='2'>
-            <column datatype='string' name='F1' ordinal='0' />
-            <column datatype='integer' name='day_of_week' ordinal='1' />
-          </columns>
-        </relation>
-        <metadata-records>
-          <metadata-record class='column'>
-            <remote-name>F1</remote-name>
-            <remote-type>130</remote-type>
-            <local-name>[F1]</local-name>
-            <parent-name>[2014]</parent-name>
-            <remote-alias>F1</remote-alias>
-            <ordinal>0</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <contains-null>true</contains-null>
-            <collation flag='1' name='LEN_RUS_S2' />
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
-            </attributes>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>day_of_week</remote-name>
-            <remote-type>20</remote-type>
-            <local-name>[day_of_week]</local-name>
-            <parent-name>[2014]</parent-name>
-            <remote-alias>day_of_week</remote-alias>
-            <ordinal>1</ordinal>
-            <local-type>integer</local-type>
-            <aggregation>Sum</aggregation>
-            <contains-null>true</contains-null>
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
-            </attributes>
-          </metadata-record>
-          <metadata-record class='capability'>
-            <remote-name />
-            <remote-type>0</remote-type>
-            <parent-name>[2014]</parent-name>
-            <remote-alias />
-            <aggregation>Count</aggregation>
-            <contains-null>true</contains-null>
-            <attributes>
-              <attribute datatype='integer' name='context'>0</attribute>
-              <attribute datatype='string' name='gridOrigin'>&quot;A1:B8:no:A1:B8:0&quot;</attribute>
-              <attribute datatype='boolean' name='header'>true</attribute>
-              <attribute datatype='integer' name='outcome'>2</attribute>
-            </attributes>
-          </metadata-record>
-        </metadata-records>
-      </connection>
-      <aliases enabled='yes' />
-      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
-        <calculation class='tableau' formula='1' />
-      </column>
-      <column caption='Day Of Week' datatype='integer' name='[day_of_week]' role='measure' type='quantitative' />
-      <layout dim-ordering='alphabetic' dim-percentage='0.527851' measure-ordering='alphabetic' measure-percentage='0.472149' show-structure='true' />
       <semantic-values>
         <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
       </semantic-values>
@@ -358,7 +1271,7 @@
       <connection class='federated'>
         <named-connections>
           <named-connection caption='uber_day_of_week' name='excel-direct.10umkc61pzmp9n1beoq4x11x9j18'>
-            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='C:\Users\Rick\Copy\CMU\Junior\67-364 Practical Data Science\UberDataScienceProject\visualizations\uber_day_of_week.xlsx' interpretationMode='0' password='' server='' validate='no' />
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='C:\Users\Rick\Copy\CMU\Junior\67-364 Practical Data Science\UberDataScienceProject\visualizations\uber_day_of_week.xlsx' interpretationMode='0' password='' server='' validate='no' workgroup-auth-mode='as-is' />
           </named-connection>
         </named-connections>
         <relation connection='excel-direct.10umkc61pzmp9n1beoq4x11x9j18' name='2015' table='[&apos;2015$&apos;]' type='table'>
@@ -367,6 +1280,7 @@
             <column datatype='integer' name='day_of_week' ordinal='1' />
           </columns>
         </relation>
+        <refresh increment-key='' incremental-updates='false' />
         <metadata-records>
           <metadata-record class='column'>
             <remote-name>F1</remote-name>
@@ -418,144 +1332,117 @@
         <calculation class='tableau' formula='1' />
       </column>
       <column caption='Day Of Week' datatype='integer' name='[day_of_week]' role='measure' type='quantitative' />
-      <layout dim-ordering='alphabetic' dim-percentage='0.472149' measure-ordering='alphabetic' measure-percentage='0.527851' show-structure='true' />
-      <semantic-values>
-        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
-      </semantic-values>
-    </datasource>
-    <datasource caption='uber_hour_of_day' inline='true' name='federated.04abxwr1j002jd10rw1ix17mtk72' version='10.1'>
-      <connection class='federated'>
-        <named-connections>
-          <named-connection caption='uber_hour_of_day' name='excel-direct.1xv9sn91yp3syc16wryx81fdk6xu'>
-            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='C:\Users\Rick\Copy\CMU\Junior\67-364 Practical Data Science\UberDataScienceProject\visualizations\uber_hour_of_day.xlsx' interpretationMode='0' password='' server='' validate='no' />
-          </named-connection>
-        </named-connections>
-        <relation connection='excel-direct.1xv9sn91yp3syc16wryx81fdk6xu' name='2014' table='[&apos;2014$&apos;]' type='table'>
-          <columns gridOrigin='A1:B25:no:A1:B25:0' header='yes' outcome='2'>
-            <column datatype='integer' name='F1' ordinal='0' />
-            <column datatype='integer' name='hour_of_day' ordinal='1' />
-          </columns>
-        </relation>
-        <metadata-records>
-          <metadata-record class='column'>
-            <remote-name>F1</remote-name>
-            <remote-type>20</remote-type>
-            <local-name>[F1]</local-name>
-            <parent-name>[2014]</parent-name>
-            <remote-alias>F1</remote-alias>
-            <ordinal>0</ordinal>
-            <local-type>integer</local-type>
-            <aggregation>Sum</aggregation>
-            <contains-null>true</contains-null>
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
-            </attributes>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>hour_of_day</remote-name>
-            <remote-type>20</remote-type>
-            <local-name>[hour_of_day]</local-name>
-            <parent-name>[2014]</parent-name>
-            <remote-alias>hour_of_day</remote-alias>
-            <ordinal>1</ordinal>
-            <local-type>integer</local-type>
-            <aggregation>Sum</aggregation>
-            <contains-null>true</contains-null>
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
-            </attributes>
-          </metadata-record>
-          <metadata-record class='capability'>
-            <remote-name />
-            <remote-type>0</remote-type>
-            <parent-name>[2014]</parent-name>
-            <remote-alias />
-            <aggregation>Count</aggregation>
-            <contains-null>true</contains-null>
-            <attributes>
-              <attribute datatype='integer' name='context'>0</attribute>
-              <attribute datatype='string' name='gridOrigin'>&quot;A1:B25:no:A1:B25:0&quot;</attribute>
-              <attribute datatype='boolean' name='header'>true</attribute>
-              <attribute datatype='integer' name='outcome'>2</attribute>
-            </attributes>
-          </metadata-record>
-        </metadata-records>
-      </connection>
-      <aliases enabled='yes' />
-      <column aggregation='Sum' datatype='integer' name='[F1]' role='dimension' type='ordinal' />
-      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
-        <calculation class='tableau' formula='1' />
-      </column>
-      <column caption='Hour Of Day' datatype='integer' name='[hour_of_day]' role='measure' type='quantitative' />
-      <layout dim-ordering='alphabetic' dim-percentage='0.47191' measure-ordering='alphabetic' measure-percentage='0.52809' show-structure='true' />
-      <semantic-values>
-        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
-      </semantic-values>
-    </datasource>
-    <datasource caption='2015 (uber_hour_of_day)' inline='true' name='federated.0tsq7881qgg60z18gjeov01s9lqz' version='10.1'>
-      <connection class='federated'>
-        <named-connections>
-          <named-connection caption='uber_hour_of_day' name='excel-direct.0pesnfg13i8dob14p4rc81vpjfh3'>
-            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='C:\Users\Rick\Copy\CMU\Junior\67-364 Practical Data Science\UberDataScienceProject\visualizations\uber_hour_of_day.xlsx' interpretationMode='0' password='' server='' validate='no' />
-          </named-connection>
-        </named-connections>
-        <relation connection='excel-direct.0pesnfg13i8dob14p4rc81vpjfh3' name='2015' table='[&apos;2015$&apos;]' type='table'>
-          <columns gridOrigin='A1:B25:no:A1:B25:0' header='yes' outcome='2'>
-            <column datatype='integer' name='F1' ordinal='0' />
-            <column datatype='integer' name='hour_of_day' ordinal='1' />
-          </columns>
-        </relation>
-        <metadata-records>
-          <metadata-record class='column'>
-            <remote-name>F1</remote-name>
-            <remote-type>20</remote-type>
-            <local-name>[F1]</local-name>
-            <parent-name>[2015]</parent-name>
-            <remote-alias>F1</remote-alias>
-            <ordinal>0</ordinal>
-            <local-type>integer</local-type>
-            <aggregation>Sum</aggregation>
-            <contains-null>true</contains-null>
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
-            </attributes>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>hour_of_day</remote-name>
-            <remote-type>20</remote-type>
-            <local-name>[hour_of_day]</local-name>
-            <parent-name>[2015]</parent-name>
-            <remote-alias>hour_of_day</remote-alias>
-            <ordinal>1</ordinal>
-            <local-type>integer</local-type>
-            <aggregation>Sum</aggregation>
-            <contains-null>true</contains-null>
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
-            </attributes>
-          </metadata-record>
-          <metadata-record class='capability'>
-            <remote-name />
-            <remote-type>0</remote-type>
-            <parent-name>[2015]</parent-name>
-            <remote-alias />
-            <aggregation>Count</aggregation>
-            <contains-null>true</contains-null>
-            <attributes>
-              <attribute datatype='integer' name='context'>0</attribute>
-              <attribute datatype='string' name='gridOrigin'>&quot;A1:B25:no:A1:B25:0&quot;</attribute>
-              <attribute datatype='boolean' name='header'>true</attribute>
-              <attribute datatype='integer' name='outcome'>2</attribute>
-            </attributes>
-          </metadata-record>
-        </metadata-records>
-      </connection>
-      <aliases enabled='yes' />
-      <column aggregation='Sum' datatype='integer' name='[F1]' role='dimension' type='ordinal' />
-      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
-        <calculation class='tableau' formula='1' />
-      </column>
-      <column caption='Hour Of Day' datatype='integer' name='[hour_of_day]' role='measure' type='quantitative' />
+      <extract count='-1' enabled='true' units='records'>
+        <connection class='dataengine' dbname='C:\Users\Rick\Documents\My Tableau Repository\Datasources\2015 (uber_day_of_week).tde' schema='Extract' tablename='Extract' update-time='03/04/2017 01:38:26 AM'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <calculations>
+            <calculation column='[Number of Records]' formula='1' />
+          </calculations>
+          <refresh increment-key='' incremental-updates='false'>
+            <refresh-event add-from-file-path='' increment-value='%null%' refresh-type='create' rows-inserted='7' timestamp-start='2017-03-04 01:38:26.300' />
+          </refresh>
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>F1</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[F1]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>F1</remote-alias>
+              <ordinal>0</ordinal>
+              <family>2015</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>7</approx-count>
+              <scale>1</scale>
+              <width>1073741823</width>
+              <contains-null>false</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <statistics>
+                <statistic aggregation='Min' datatype='string'>&quot;Fri&quot;</statistic>
+                <statistic aggregation='Max' datatype='string'>&quot;Wed&quot;</statistic>
+                <statistic aggregation='Count' datatype='integer'>7</statistic>
+                <statistic aggregation='Median' datatype='string'>&quot;Sun&quot;</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US_CI&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (ordered)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (sort-position)'>0</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (sort-sense)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>1</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (unique)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Number of Records</remote-name>
+              <remote-type>16</remote-type>
+              <local-name>[Number of Records]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Number of Records</remote-alias>
+              <ordinal>1</ordinal>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Sum' datatype='real'>7.0</statistic>
+                <statistic aggregation='Avg' datatype='real'>1.0</statistic>
+                <statistic aggregation='Min' datatype='integer'>1</statistic>
+                <statistic aggregation='Max' datatype='integer'>1</statistic>
+                <statistic aggregation='Stdev' datatype='real'>0.0</statistic>
+                <statistic aggregation='StdevP' datatype='real'>0.0</statistic>
+                <statistic aggregation='Var' datatype='real'>0.0</statistic>
+                <statistic aggregation='VarP' datatype='real'>0.0</statistic>
+                <statistic aggregation='Count' datatype='integer'>7</statistic>
+                <statistic aggregation='Median' datatype='integer'>1</statistic>
+                <statistic aggregation='SumXSqr' datatype='real'>7.0</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteMetadata (ordered)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>1</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;sint8&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>day_of_week</remote-name>
+              <remote-type>3</remote-type>
+              <local-name>[day_of_week]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>day_of_week</remote-alias>
+              <ordinal>2</ordinal>
+              <family>2015</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>7</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Sum' datatype='real'>14270479.0</statistic>
+                <statistic aggregation='Avg' datatype='real'>2038639.857142857</statistic>
+                <statistic aggregation='Min' datatype='integer'>1694252</statistic>
+                <statistic aggregation='Max' datatype='integer'>2414563</statistic>
+                <statistic aggregation='Stdev' datatype='real'>254908.63953151827</statistic>
+                <statistic aggregation='StdevP' datatype='real'>235999.5420839556</statistic>
+                <statistic aggregation='Var' datatype='real'>64978414507.809525</statistic>
+                <statistic aggregation='VarP' datatype='real'>55695783863.836731</statistic>
+                <statistic aggregation='Count' datatype='integer'>7</statistic>
+                <statistic aggregation='Median' datatype='integer'>1893811</statistic>
+                <statistic aggregation='SumXSqr' datatype='real'>29482237756967.0</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (sort-position)'>1</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (sort-sense)'>&quot;asc&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (unique)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;sint32&quot;</attribute>
+              </attributes>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
       <layout dim-ordering='alphabetic' dim-percentage='0.468657' measure-ordering='alphabetic' measure-percentage='0.531343' show-structure='true' />
       <semantic-values>
         <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
@@ -586,7 +1473,7 @@
         </view>
         <style />
         <panes>
-          <pane>
+          <pane id='2'>
             <view>
               <breakdown value='auto' />
             </view>
@@ -798,7 +1685,7 @@
         </view>
         <style />
         <panes>
-          <pane>
+          <pane id='1'>
             <view>
               <breakdown value='auto' />
             </view>
@@ -4700,7 +5587,7 @@
         </edge>
       </cards>
     </window>
-    <window class='dashboard' maximized='true' name='Day of Year'>
+    <window class='dashboard' name='Day of Year'>
       <viewpoints>
         <viewpoint name='day_of_year_2014'>
           <zoom type='entire-view' />
@@ -4709,7 +5596,7 @@
           <zoom type='entire-view' />
         </viewpoint>
       </viewpoints>
-      <active id='3' />
+      <active id='-1' />
     </window>
     <window class='dashboard' name='Day of Month'>
       <viewpoints>
@@ -4722,7 +5609,7 @@
       </viewpoints>
       <active id='3' />
     </window>
-    <window class='dashboard' name='Day of Week'>
+    <window class='dashboard' maximized='true' name='Day of Week'>
       <viewpoints>
         <viewpoint name='day_of_week_2014' />
         <viewpoint name='day_of_week_2015' />
@@ -5251,104 +6138,104 @@
     </thumbnail>
     <thumbnail height='192' name='Hour of Day' width='192'>
       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
-      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
-      ODD/D5hTF81pINIvAAAAAElFTkSuQmCC
+      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
+      uXq1SYim+X+9Es0al9ibUwAAAABJRU5ErkJggg==
     </thumbnail>
     <thumbnail height='192' name='day_of_month_2014' width='192'>
       iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAACXBIWXMAAA7EAAAOxAGVKw4b
@@ -5575,37 +6462,37 @@
     </thumbnail>
     <thumbnail height='192' name='day_of_week_2015' width='192'>
       iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAACXBIWXMAAA7EAAAOxAGVKw4b
-      AAAGXElEQVR4nO3cXW9bhQHG8cc+xzh24mRpnJCXpgQlNF0LRVAQCFo0adAb+EB8Hq63adru
-      Bts0uo2tAgTqgKaQpEQJiZ20efV7bO8iFWOSVYdKPo79/H83dk5unov87XNs5cSazWZTgKl4
-      twcA3UQAsEYAsEYAsBa2OvjHW3f0+dJ61FvQR8Igprdvvqzl3YNuT3mslgF8endNv/vrl1Fv
-      QR9JhIGeeWVB/1zPdXvKY3EKBGsEAGunCiAM4grisU5vQR9rNpuqH9fUqNd1lr56bXkN8FPT
-      s7N661JWxcKRPvzXtyo1To5nJrJK7e4oX+v0RPSDw9UvtPbV9wozY5q/cUOJoNuLTrQNoF6v
-      KxaLaWV1S8mxCb334qzy6xtKX7yshdKWPri1pP1yPYqt6GHxMKFms6lz84tqBnlVdo+1t9fQ
-      wd2PVSoGmnrzpsYnRyPf1TaAB/mcfv/xA7360kWNFssKg1BXL07ot1/f18rmivbLUcxEr0tN
-      PadL2Tlt3L6lIHtVqVJB5VJcyeyzmrswqe1KpSu72l4D/GIsq3evX9FwvaDNw4pq1YpWNvd1
-      tFfUa69f1nCS62i0V87f172//EnV8JyOc4da+ewrJdJppUbPKZZMayCV7Mqutu8AO7mcfpP7
-      32e5362s/fj8gz9vdWYV+s7gzKKuzCz++PPTc5f+7/fnoh70CC/fsEYAsEYAsEYAsEYAsEYA
-      sEYAsEYAsEYAsEYAsEYAsEYAsEYAsEYAsEYAsEYAsEYAsEYAsEYAsEYAsEYAsEYAsEYAsEYA
-      sEYAsEYAsEYAsEYAsEYAsEYAsEYAsEYAsEYAsEYAsEYAsEYAsEYAsEYAsEYAsEYAsEYAsEYA
-      sEYAsEYAsEYAsEYAsEYAsEYAsEYAsEYAsEYAsEYAsEYAsEYAsEYAsBa2OvjC/LRKlVrUW9BH
-      wnhvvLa2DGD1oKTbuf2ot6CPJIK4Lnd7xCm0DKBcPdZhqRr1FvSRRNAb7wC9sRLoEAKAtZan
-      QD+VTKV1Y3FatdKh/rGU03EUq4CItA1gaDSlrbWclg+LioeBhhKh0kNphYVD/VAkB/S2tgFI
-      oV57fkZT23kVgmGNBGVt1JoqFwudXwd02CmuAY71t8/u6cNvtlSrFvXRnTUdVBudXwZEoO07
-      wNHekarVk1Odlc2HOm5IO7ldxSuc/qD3tQ2gUqyo8uj5g8OiJOno0SPQ6/gYFNYIANYIANYI
-      ANYIANYIANYIANYIANYIANYIANYIANYIANYIANYIANYIANYIANYIANYIANYIANYIANZOcV8g
-      4Mn8MjuigfBsv8YSADrmh0JB3zzc7faMxzrbeQIdRgCwRgCwxjUAIrH15d9174slDUzM6oVf
-      /VqpVNDtSZIIABGZfPG6DvIFzb5zU6nanmolqVJOqJK/q+2DUAvXriqMxyLfRQCIXmlD5aK0
-      8/2Blj65rXgiUOb8Bc1MjUY+hQAQub2HR1q9s6zBqUWNTJ/X2PkZZYYHurKFABCZZ6/fUCAp
-      PnFF828sKJUZ0YXn5lQuN5QeSHZlEwEgMolUWpKUTA8pmR46OfbUmAZGureJj0FhjQBgjQBg
-      jQBgjQBgjQBgjQBgjQBgjQBgjQBgjQBgjQBgjQBgjQBgjQBgjQBgjQBgjQBgjQBgjQBgreU/
-      xb+yMK1EeDbu3IXeFHThJldPomUAn+/s6w+rW1FvQR8J43G9//x0t2e0xSkQrBEArBEArLW9
-      M9z8zKReHh9UrVrRfzZ3tbxbUDOKZUAE2r4DLG9sab1U1Udfr2skM6RnsiOaSCU0mEwoLimT
-      5O6K6F0/7xQofEpPp5O6dmFML81NKqVAr8+Nd2ga0Hk/L4BaRZ+u72i7XFddMc2MZpQd4PsC
-      9K5Tnb/cXd9WSdJ323tqNBr6Nr+vqo50dXxQn9x/0OGJQOecKoDdQlmStF+unjyWTh7/vVbq
-      0CwgGnwMCmsEAGsEAGsEAGsEAGsEAGsEAGsEAGsEAGsEAGsEAGsEAGsEAGsEAGsEAGsEAGsE
-      AGsEAGsEAGsEAGsEAGsEAGsEAGsEAGsEAGsEAGsEAGsEAGsEAGsEAGsEAGsEAGsEAGsEAGsE
-      AGsEAGsEAGsEAGsEAGsEAGsEAGsEAGsEAGsEAGsEAGsEAGsEAGsEAGthq4PXZseViNMGnlwQ
-      j2luOKMgdrb/jv4LwlNV1gwkSvwAAAAASUVORK5CYII=
+      AAAGaklEQVR4nO3d3W9b9QHG8cfHx43jNiSBvKD0JaFJm7WUMXUVhSEkNE3TEJvGf7cbLtjt
+      JHbBblC3UUS3anSjAgpZUkjfEpK4SZM6L349tndRVHWbFQeQz0n8fD9XiaNIz0W+Pr/jKE6q
+      2Ww2BZgKkh4AJIkAYI0AYI0AYC1s9eCfrtzQ9bnFuLegi4TplH7xy/Oa39hMesquWgbwr9l7
+      +uPlz+Legi6SCdMavzClq4v5pKfsiiMQrBEArO0pgDAdKB2kOr0FXazZbKoR1dSo17WffvXa
+      8h7gSUfHT+j16SGVitt6/+pNFRuPHu8fHVZ2Y1X5aqcnohts35vR4swthf0jmrh4UZl00ose
+      aRtAPaorCFL66tayskOj+s2Pj+n+N0s6PH1GJ4sr+v1HcyqU63FsxQEWhGkpFWhgYkqF2Rvq
+      m/6RHs7MqudQWd8srijMHdXpV84rFfNBo20Aa/m83n2wppcvTGuoWFaYzujF0yN6d+au5pfm
+      VSjHMRMHXe/oSU09fVz5Tz9WtZrV4VORyhsFZQZ7Nf7zN7X55aeJ7Gp7DzA4PKxfv/a8+mrb
+      WipUVKtVdHuloM2Noi6+fFb92X1yLcO+VnmwoK8//LPKQb+Gxwc0/8FfVVFGmb4BhUGgbF9/
+      IrvaXgFWl5f1h+Xlx5/Pzd99/PE7f1lu9S3A/+kdndSZNyYff35u4ux/fT07Mfm/3xILXgaF
+      NQKANQKANQKANQKANQKANQKANQKANQKANQKANQKANQKANQKANQKANQKANQKANQKANQKANQKA
+      NQKANQKANQKANQKANQKANQKANQKANQKANQKANQKANQKANQKANQKANQKANQKANQKANQKANQKA
+      NQKANQKANQKANQKANQKANQKANQKANQKANQKANQKANQKANQKANQKANQKANQKANQKANQKANQKA
+      tbDVgy9MjqlUqcW9BV0kDA7Gc2vLAG5vlnQtX4h7C7pIJh3obNIj9qBlAOVqpK1SNe4t6CKZ
+      9MG4AhyMlUCHEACstTwCPaknl9Nrp8cUlbb097m8uDVGN2kbwFODOa3dy2tuq6ggTOtIJqPD
+      R3LK7GxqsRjFsRHomLYBSGm9dO45jazeVynsV3+6rMVqU9XSdufXAR22h3uASFeu39Slf6+o
+      Vivq0ud3tVltdH4ZEIO2V4CtjW1Vq4+OOl8vPVCtId3Pryssc/zBwdc2gHKxovK3H69tFiVJ
+      21vFTm4CYsPLoLBGALBGALBGALBGALBGALBGALBGALBGALBGALBGALBGALBGALBGALBGALBG
+      ALBGALBGALBGALBGALC2h/cFAr6fwewhHe3LJT1jVwSAjhnoPaSjT/UmPWNXBICOWS+XtbC1
+      k/SMXXEPAGsEAGscgRCLndUFFdZ3lMr0aPjEuMJwfzz37o8V6HrNel0L166pHEVqJj3mCQSA
+      WBx5dkLDxyc0dvqUbn/yD9Wjor762yda+eyKLr/9O335z7lEwuAIhNg1o0j1WkXlYkk7q7c0
+      dOqscrlMIlu4AiA2/cePKS3p2HOj+uLyVeVGR3TqlVdVebihdDabyCauAIjNM5MnJUnh2LTO
+      j00/fvzCb6eSmsQVAN4IANYIANYIANYIANYIANYIANYIANYIANYIANYIANYIANYIANYIANYI
+      ANYIANYIANYIANYIANYIANZa/lF8KpVSkErFvQVdJAgOxs9PywB++vwJpQcOx70FXSR9QJ5A
+      WwZwfXFN7924E/MUdJMwCHRmYjDpGW1xDwBrBABrbd8ZLkilvj3PNVVvNtXYT2/tC/xAbQOY
+      eHZYb507pnsLK1qv1vXRnbyiRhzTgM5rewS6tXxfHy+s6tLskrbUo7denNSbU0P6yfiIcgr0
+      s/GhOHYCHfHd7gGiit77/I7Wo5QGenuUSQUazh3q0DSg8/b07tAb2yVFkgqliqJGQxulqiqV
+      QL964bgq5f39XwCB3ewpgJnFNUnSzdWHkqTZfEFSQbeXO7YLiAUvg8IaAcAaAcAaAcAaAcAa
+      AcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAa
+      AcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAa
+      AcAaAcAaAcAaAcAaAcAaAcAaAcAaAcDafwBJr1/B3QpmwgAAAABJRU5ErkJggg==
     </thumbnail>
     <thumbnail height='192' name='day_of_year_2014' width='192'>
       iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAACXBIWXMAAA7EAAAOxAGVKw4b
@@ -6279,99 +7166,84 @@
     </thumbnail>
     <thumbnail height='192' name='hour_of_day_2015' width='192'>
       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
-      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
+      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
     </thumbnail>
   </thumbnails>
 </workbook>
