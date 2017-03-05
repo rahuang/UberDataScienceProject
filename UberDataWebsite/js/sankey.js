@@ -18,9 +18,9 @@ createSankey(index15, "#data-2015", 2015);
 
 function createSankey(data, selector, year){
     var color ={Sun:"#3366CC", Mon:"#DC3912",  Tue:"#FF9900", Wed:"#109618", Thu:"#990099", Fri:"#0099C6"};
-    var svg = d3.select(selector).append("svg").attr("width", 960).attr("height", 800);
+    var svg = d3.select(selector).append("svg").attr("width", 600).attr("height", 800);
 
-    svg.append("text").attr("x",250).attr("y",70)
+    svg.append("text").attr("x",120).attr("y",70)
         .attr("class","header").text("Uber Popularity By Day By Hour for " + year);
 
     var g =[svg.append("g").attr("transform","translate(150,100)")];
