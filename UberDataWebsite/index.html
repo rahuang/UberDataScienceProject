@@ -73,10 +73,10 @@
         <li><a href="#about-section" class="page-scroll">About</a></li>
         <li><a href="#analysis-section" class="page-scroll">Uber by Neighborhoods</a></li>
         <li><a href="#understand-section" class="page-scroll">Uber by Time</a></li>
-        <li><a href="#services-section" class="page-scroll">Uber vs. FHV</a></li>
-        <li><a href="#method-section" class="page-scroll">Methodology</a></li>
+        <li><a href="#trend-section" class="page-scroll">Uber vs. FHV</a></li>
+        <li><a href="#services-section" class="page-scroll">Learned</a></li>
+        <li><a href="#method-section" class="page-scroll">Conclusion</a></li>
         <li><a href="#team-section" class="page-scroll">Team</a></li>
-        <li><a href="#contact-section" class="page-scroll">Predict</a></li>
       </ul>
     </div>
     <!-- /.navbar-collapse --> 
@@ -101,13 +101,29 @@
         <hr>
       </div>
       <div class="row wow fadeInDown" data-wow-delay="200ms">
-        <div class="col-md-6"> <iframe frameborder="no" width="580" height="410" src="http://www.wideo.co/embed/14490681461687860857?width=570&height=400 "></iframe> </div>
+        <div class="col-md-6"> 
+          <iframe frameborder="no" width="580" height="410" src="http://www.wideo.co/embed/14490681461687860857?width=570&height=400 "></iframe> 
+        </div>
         <div class="col-md-6">
           <div class="about-text">
-            <h3><span class="color">Who</span> we are</h3>
-            <p>We are a group of four information technology students, two undergrad, and two masters, from Carnegie Mellon University. Our career paths have led us all to the Data Pipeline master course offered at the Human Computer Interaction Master Program. In this course we have learned may steps of the data pipeline, all leading to our final project which you have before you.</p>
-            <h3><span class="color">What's</span> our Purpose</h3>
-            <p>For our final project, which we have to encompass the whole data pipeline, we chose the Yelp Dataset Challenge. We were attracted to this set due to recent publicity about ho the city of Pittsburgh is considered one of the top food cities. Our task in this project is to explore and gain some insightful insights on the data. For this purpose, we are taking on the challenge of what it takes to beat Yelp.</p>
+            <h3><span class="color">Why</span> is this important</h3>
+            <p>Our goal is to analyze the popularity of Uber in areas of New York City in comparison to their competitors: Lyft and other car services. We hope to gain insight on the times/areas of activity and the number of rides made in different locations between the various services. Another interesting aspect we’d like to explore is the characteristics (e.g. wealth, density, age, etc.) of the locations that these services are most popular in.</p>
+            <h3><span class="color">What</span> are we looking for</h3>
+            <p>
+              In what neighborhoods of New York City are the different ride-sharing, car services and taxis the most popular?
+              <br>
+              What are the characteristics of the various neighborhoods that different ride-sharing and car services are most popular in?
+              <br><br>
+              What is the activity during different times of the day between ride-sharing (Uber), car services and taxis in various neighborhoods in New York City?
+              <br>
+              Are there certain times of day that either one of the services is more popular?
+              <br><br>
+              What is the trend of the activity between Uber and Yellow Cab taxi service from 2014-2016?
+              <br>
+              Has Uber increased in popularity or even surpassed Yellow Cab in number of trips per day?
+              <br>
+              In which months is Uber or Yellow Cab more popular?
+            </p>
           </div>
         </div>
       </div>
@@ -121,7 +137,7 @@
     <div class="row wow fadeInDown" data-wow-delay="400ms">
       <div class="achievement-box">
         <p class="achievement-title">Our Data</p>
-        <p>Sources: <a href="http://www.yelp.com/dataset_challenge" target="_blank">Yelp Data Challenge</a> & <a href="https://www.yelp.com/developers/documentation/v2/overview" target="_blank">Yelp API</a></p>
+        <p>Sources: <a href="https://github.com/fivethirtyeight/uber-tlc-foil-response" target="_blank">FiveThirtyEight Uber NYC Dataset</a></p>
       </div>
     </div>
     <div class="row wow fadeInDown" data-wow-delay="400ms">
@@ -153,14 +169,14 @@
   <div class="container">
     <div class="row">
       <div class="section-title text-center center wow fadeInDown">
-        <h2>Uber By Neighborhoods</h2>
+        <h2>Uber By Location</h2>
         <hr>
       </div>
       <div class="row wow fadeInDown" data-wow-delay="200ms">
         <div class="col-md-1"></div>
         <div class="col-md-10">
           <div class="about-text text-center">
-            <h1 class="viz-title">Exploring Categories and Attributes</h1>
+            <h1 class="viz-title">NYC Uber Pickup Heat Map</h1>
             <h3 class="viz-subtitle">After understanding Yelp, we dove deep into the restaurant attributes and analyzed which attributes benefitted each category the most.</h3>
             <p>Yelp gives restaurants the option to add many categories, essentially making them more unique. A question that came to mind was is there some sort of similarity with the categories that restaurants have and their ranking. Since there were so many categories, to do some comprehensive analysis, we decided to use a word cloud that allows us  to map the most popular categories, based on the restaurants in specific bins. So, if you select 0 to 1, you can tell that they all share the "American(new)," category. This is supposed to allow you as a user to see what are popular categories, or maybe see what is lacking from the top places. The right column tells users what the best attributes to have to achieve a higher ranking for each of the categories.</p>
             <p>In addition to the word cloud, something we had to do was extract the most important attributes of a restaurant that determine is a success and tanking. Using a Gradient Boosting Machine, we extract the top 8 features, so you can see how they do within the selected group.</p>
@@ -184,7 +200,7 @@
         <div class="col-md-1"></div>
         <div class="col-md-10">
           <div class="about-text text-center">
-            <h1 class="viz-title">Exploring Categories and Checkin Days</h1>
+            <h1 class="viz-title">Uber Pickup Popularity By Neighborhoods</h1>
             <h3 class="viz-subtitle">We then used a Sankey to explore which days of week people tend to checkin to each category of restaurants.</h3>
             <p>Along with restaurant and review information, the yelp data set also included check-in information. Check-in information is the time that users check in manually via their phones when they are at a particular business. This information could have valuable insight, so our team decides that the best way to go about exploring the times people check in and where is with a Sankey chart using D3. We explored the top 15 most popular categories and which days of the week yelp reviewers tend to checkin the most frequently.</p>
             <p>There is no surprise that Friday had the most checkins and Sunday/Monday had the least. One surprising find was that Thursday actually had more checkins compared to Saturday.</p>
@@ -213,22 +229,6 @@
     <div class="row">
       <div class="section-title text-center center wow fadeInDown">
         <h2>Uber By Time</h2>
-        <hr>
-      </div>
-      <div class="row wow fadeInDown" data-wow-delay="200ms">
-        <div class="col-md-8"> 
-         <div class='tableauPlaceholder' id='viz1488648584266' style='position: relative'><noscript><a href='#'><img alt='Day of Year ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ub&#47;Uber_Time_Vizualizations&#47;DayofYear&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='site_root' value='' /><param name='name' value='Uber_Time_Vizualizations&#47;DayofYear' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ub&#47;Uber_Time_Vizualizations&#47;DayofYear&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1488648584266');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='754px';vizElement.style.height='669px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
-        </div>
-        <div class="col-md-4">
-          <div class="about-text">
-            <h1 class="viz-title">Uber Rides By Day of Year</h1>
-            <h3 class="viz-subtitle">We first wanted to see the validity of Yelp's own ranking based on number of reviews and review stars.</h3>
-            <p>Since we wanted to distinguish what might differentiate the top restaurants from the weaker ones, we needed to find some sort of defining the feature. Upon further exploration, we find out that star rating isn't the attribute that best defines restaurants since the majority of the top restaurants are 4 stars. So, to solve this problem we decided to take the very ambiguous ranking algorithm that Yelp uses to determine more insight about the top restaurants. To do this we scraped the Yelp website for "Best Restaurants in Pittsburgh, Pa," to determine what they are. We only received the top 100 restaurants which are more than half of the total restaurants and the rest we gave them the same ranking. Because there are over a thousand, and that in itself might not be very descriptive we added bins of size 10 to minimize the top 1000 to the top 100 bins. Once, we matched all the bands to the corresponding restaurant, we explored and implore you to explore the relationship that the top restaurants have an average rating and a number of reviews. Using Tableau we explore this, and by selecting the bins you can see correlations, For example selecting groups 0 to 5, you  see how they are all in the top right. As you increase the size or go down the ranking group, the lower average number of reviews, and rating as well.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="section-title text-center center wow fadeInDown">
         <hr>
       </div>
 
@@ -296,6 +296,35 @@
 </div>
 
 
+<!-- Understanding Yelp Section -->
+<div id="trend-section">
+  <div class="container">
+    <div class="row">
+      <div class="section-title text-center center wow fadeInDown">
+        <h2>Uber vs. Other FHV</h2>
+        <hr>
+      </div>
+      <div class="row wow fadeInDown" data-wow-delay="200ms">
+        <div class="col-md-1"></div>
+        <div class="col-md-10">
+          <div class="about-text text-center">
+            <h3 class="viz-subtitle">After understanding Yelp, we dove deep into the restaurant attributes and analyzed which attributes benefitted each category the most.</h3>
+            <p>Yelp gives restaurants the option to add many categories, essentially making them more unique. A question that came to mind was is there some sort of similarity with the categories that restaurants have and their ranking. Since there were so many categories, to do some comprehensive analysis, we decided to use a word cloud that allows us  to map the most popular categories, based on the restaurants in specific bins. So, if you select 0 to 1, you can tell that they all share the "American(new)," category. This is supposed to allow you as a user to see what are popular categories, or maybe see what is lacking from the top places. The right column tells users what the best attributes to have to achieve a higher ranking for each of the categories.</p>
+            <p>In addition to the word cloud, something we had to do was extract the most important attributes of a restaurant that determine is a success and tanking. Using a Gradient Boosting Machine, we extract the top 8 features, so you can see how they do within the selected group.</p>
+          </div>
+        </div>
+        <div class="col-md-1"></div>
+      </div>
+      <div class="row wow fadeInDown" data-wow-delay="200ms">
+        <div class="col-md-12 text-center"> 
+          <div class='tableauPlaceholder' id='viz1488751278870' style='position: relative'><noscript><a href='#'><img alt='Uber vs. FHV ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ub&#47;Uber_Trend_Vizualizations&#47;Ubervs_FHV&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='site_root' value='' /><param name='name' value='Uber_Trend_Vizualizations&#47;Ubervs_FHV' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ub&#47;Uber_Trend_Vizualizations&#47;Ubervs_FHV&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1488751278870');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height='650px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<br><br>
+
 
 
 <!-- Services Section -->
@@ -345,11 +374,13 @@
     </div>
   </div>
 </div>
+
+
 <!-- Portfolio Section -->
 <div id="method-section">
   <div class="container"> <!-- Container -->
     <div class="section-title text-center wow fadeInDown">
-      <h2>Our Approach/Methodology</h2>
+      <h2>Conclusion and Answers</h2>
       <hr>
       <div class="clearfix"></div>
     </div>
@@ -357,7 +388,7 @@
   <div class="container-fluid">
     <div class="row">
       <div class="portfolio-items">
-        <div class="col-sm-6 col-md-3 col-lg-3 machine">
+        <div class="col-sm-6 col-md-4 col-lg-4 machine">
           <div class="portfolio-item wow fadeInDown" data-wow-delay="200ms">
             <div class="hover-bg"> <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
               <div class="hover-text">
@@ -368,7 +399,7 @@
               <img src="img/portfolio/01-preview.jpg" class="img-responsive" alt="Project Title"> </a> </div>
           </div>
         </div>
-        <div class="col-sm-6 col-md-3 col-lg-3 machine">
+        <div class="col-sm-6 col-md-4 col-lg-4 machine">
           <div class="portfolio-item wow fadeInDown" data-wow-delay="400ms">
             <div class="hover-bg"> <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
               <div class="hover-text">
@@ -379,7 +410,7 @@
               <img src="img/portfolio/02-preview.jpg" class="img-responsive" alt="Project Title"> </a> </div>
           </div>
         </div>
-        <div class="col-sm-6 col-md-3 col-lg-3 machine">
+        <div class="col-sm-6 col-md-4 col-lg-4 machine">
           <div class="portfolio-item wow fadeInDown" data-wow-delay="600ms">
             <div class="hover-bg"> <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
               <div class="hover-text">
@@ -390,73 +421,13 @@
               <img src="img/portfolio/03-preview.jpg" class="img-responsive" alt="Project Title"> </a> </div>
           </div>
         </div>
-        <div class="col-sm-6 col-md-3 col-lg-3 machine">
-          <div class="portfolio-item wow fadeInDown" data-wow-delay="800ms">
-            <div class="hover-bg"> <a href="#portfolioModal4" class="portfolio-link" data-toggle="modal">
-              <div class="hover-text">
-                <h4>Regression</h4>
-                <p>Step 4</p>
-                <div class="clearfix"></div>
-              </div>
-              <img src="img/portfolio/04-preview.jpg" class="img-responsive" alt="Project Title"> </a> </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="container"> <!-- Container -->
-      <div class="section-title text-center wow fadeInDown">
-        <h2>4 C's</h2>
-        <hr>
-        <div class="clearfix"></div>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="portfolio-items">
-        <div class="col-sm-6 col-md-3 col-lg-3 4c">
-          <div class="portfolio-item wow fadeInDown" data-wow-delay="200ms">
-            <div class="hover-bg"> <a href="#portfolioModal5" class="portfolio-link" data-toggle="modal">
-              <div class="hover-text">
-                <h4>Completeness</h4>
-                <div class="clearfix"></div>
-              </div>
-              <img src="img/portfolio/05-preview.png" class="img-responsive" alt="Project Title"> </a> </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-3 col-lg-3 4c">
-          <div class="portfolio-item wow fadeInDown" data-wow-delay="400ms">
-            <div class="hover-bg"> <a href="#portfolioModal6" class="portfolio-link" data-toggle="modal">
-              <div class="hover-text">
-                <h4>Coherence</h4>
-                <div class="clearfix"></div>
-              </div>
-              <img src="img/portfolio/06-preview.jpg" class="img-responsive" alt="Project Title"> </a> </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-3 col-lg-3 4c">
-          <div class="portfolio-item wow fadeInDown" data-wow-delay="600ms">
-            <div class="hover-bg"> <a href="#portfolioModal7" class="portfolio-link" data-toggle="modal">
-              <div class="hover-text">
-                <h4>Correctness</h4>
-                <div class="clearfix"></div>
-              </div>
-              <img src="img/portfolio/07-preview.png" class="img-responsive" alt="Project Title"> </a> </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-3 col-lg-3 4c">
-          <div class="portfolio-item wow fadeInDown" data-wow-delay="800ms">
-            <div class="hover-bg"> <a href="#portfolioModal8" class="portfolio-link" data-toggle="modal">
-              <div class="hover-text">
-                <h4>Accountability</h4>
-                <div class="clearfix"></div>
-              </div>
-              <img src="img/portfolio/08-preview.jpg" class="img-responsive" alt="Project Title"> </a> </div>
-          </div>
-        </div>
       </div>
     </div>
   </div>
 </div>
+
+
+
 <!-- Team Section -->
 <div id="team-section" class="text-center">
   <div class="container">
@@ -467,7 +438,7 @@
       <div class="space"></div>
     </div>
     <div id="row" class="wow fadeInDown" data-wow-delay="200ms">
-      <div class="col-md-3 col-sm-6 team">
+      <div class="col-md-6 col-sm-6 team">
         <div class="thumbnail"> <img src="img/team/rick.jpg" alt="..." class="team-img">
           <div class="caption">
             <h3>Richard Huang</h3>
@@ -475,219 +446,22 @@
           </div>
         </div>
       </div>
-      <div class="col-md-3 col-sm-6 team">
-        <div class="thumbnail"> <img src="img/team/sebastian.jpg" alt="..." class="team-img">
+      <div class="col-md-6 col-sm-6 team">
+        <div class="thumbnail"> <img src="img/team/vinitha.jpg" alt="..." class="team-img">
           <div class="caption">
-            <h3>Sebastian Guerrero</h3>
+            <h3>Vinitha Ranganeni</h3>
             <p>Information Systems</p>
           </div>
         </div>
       </div>
-      <div class="col-md-3 col-sm-6 team">
-        <div class="thumbnail"> <img src="img/team/ankit.jpg" alt="..." class="team-img">
-          <div class="caption">
-            <h3>Ankit Gupta</h3>
-            <p>MISM</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-3 col-sm-6 team">
-        <div class="thumbnail"> <img src="img/team/sophia.jpg" alt="..." class="team-img">
-          <div class="caption">
-            <h3>Li (Sophia) He</h3>
-            <p>Public Policy</p>
-          </div>
-        </div>
-      </div>
     </div>
   </div>
 </div>
 
-<!-- Contact Section -->
-<div id="contact-section">
-  <div class="container">
-    <div class="section-title text-center wow fadeInDown">
-      <h2>Predict Expected Ranking</h2>
-      <hr>
-      <div class="clearfix"></div>
-    </div>
-<!--     <div class="col-md-4 wow fadeInDown" data-wow-delay="200ms">
-      <h3>Contact Info</h3>
-      <div class="space"></div>
-      <p><i class="fa fa-map-marker fa-fw pull-left fa-2x"></i>321 Awesome Street<br>
-        New York, NY 17022</p>
-      <div class="space"></div>
-      <p><i class="fa fa-envelope-o fa-fw pull-left fa-2x"></i>info@companyname.com</p>
-      <div class="space"></div>
-      <p><i class="fa fa-phone fa-fw pull-left fa-2x"></i>+1 800 123 1234</p>
-    </div> -->
-    <div class="col-md-12 wow fadeInDown" data-wow-delay="200ms">
-      <h3>Fill out the features of your restaurant</h3>
-      <form name="sentMessage" id="contactForm" novalidate>
-        <div class="row">
-          <div class="col-md-2">
-            <div class="form-group">
-              <h4>Take Out</h4>
-              <input type="checkbox" id="take-out" class="form-control toggle">
-              <p class="help-block text-danger"></p>
-            </div>
-          </div>
-          <div class="col-md-2">
-            <div class="form-group">
-              <h4>Reservations</h4>
-              <input type="checkbox" id="reservations" class="form-control toggle">
-              <p class="help-block text-danger"></p>
-            </div>
-          </div>
-          <div class="col-md-2">
-            <div class="form-group">
-              <h4>Catering</h4>
-              <input type="checkbox" id="catering" class="form-control toggle">
-              <p class="help-block text-danger"></p>
-            </div>
-          </div>
-          <div class="col-md-2">
-            <div class="form-group">
-              <h4>Wifi</h4>
-              <input type="checkbox" id="wifi" class="form-control toggle">
-              <p class="help-block text-danger"></p>
-            </div>
-          </div>
-          <div class="col-md-2">
-            <div class="form-group">
-              <h4>Drive-Thru</h4>
-              <input type="checkbox" id="drive-through" class="form-control toggle">
-              <p class="help-block text-danger"></p>
-            </div>
-          </div>
-          <div class="col-md-2">
-            <div class="form-group">
-              <h4>Alcohol</h4>
-              <input type="checkbox" id="alcohol" class="form-control toggle">
-              <p class="help-block text-danger"></p>
-            </div>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-md-3">
-            <div class="form-group">
-              <h4>Neighborhoods</h4>
-              <select id="neighborhoods" name="neighborhoods" class="form-control" required="required">
-                <option value="40">Not Available</option>
-                <option value="22">Etna</option>
-                <option value="30">Homestead</option>
-                <option value="7">Bellevue</option>
-                <option value="59">Windgap</option>
-                <option value="23">Friendship</option>
-                <option value="44">Point Breeze</option>
-                <option value="47">Shadyside</option>
-                <option value="36">Morningside</option>
-                <option value="21">East Liberty</option>
-                <option value="28">Highland Park</option>
-                <option value="8">Bloomfield</option>
-                <option value="37">Mt. Oliver</option>
-                <option value="50">South Side</option>
-                <option value="1">Allentown</option>
-                <option value="13">Carrick</option>
-                <option value="43">Overbrook</option>
-                <option value="11">Brookline</option>
-                <option value="39">North Side</option>
-                <option value="56">Troy Hill</option>
-                <option value="10">Brighton Heights</option>
-                <option value="42">Observatory Hill</option>
-                <option value="15">Dormont</option>
-                <option value="16">Dormont Banksville</option>
-                <option value="6">Beechview</option>
-                <option value="5">Banksville Beechview</option>
-                <option value="4">Banksville</option>
-                <option value="27">Greentree</option>
-                <option value="57">West End</option>
-                <option value="14">Crafton Heights</option>
-                <option value="17">Downtown</option>
-                <option value="54">Strip District</option>
-                <option value="12">Carnegie</option>
-                <option value="24">Garfield</option>
-                <option value="34">Lawrenceville</option>
-                <option value="52">Squirrel Hill</option>
-                <option value="26">Greenfield</option>
-                <option value="35">Millvale</option>
-                <option value="19">Duquesne Heights_Mt. Washington</option>
-                <option value="38">Mt. Washington</option>
-                <option value="18">Duquesne Heights</option>
-                <option value="41">Oakland</option>
-                <option value="49">Sharpsburg </option>
-                <option value="2">Aspinwall</option>
-                <option value="53">Squirrel Hill_Hazelwood </option>
-                <option value="55">The Hill District </option>
-                <option value="45">Polish Hill </option>
-                <option value="46">Regent Square </option>
-                <option value="51">South Side Slopes </option>
-                <option value="33">Larimer </option>
-                <option value="32">Knoxville </option>
-                <option value="20">East Carnegie_Greentree </option>
-                <option value="3">Avalon</option>
-                <option value="31">Homewood </option>
-                <option value="25">Garfield_Bloomfield </option>
-                <option value="29">Highland Park_East Liberty </option>
-                <option value="9">Bon Air  </option>
-                <option value="58">West View </option>
-                <option value="48">Shadyside_Friendship </option>
-              </select>
-              <p class="help-block text-danger"></p>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="form-group">
-              <h4>Attire</h4>
-              <select id="attire" name="attire" class="form-control" required="required">
-                <option value="1">Not Available</option>
-                <option value="2">Casual</option>
-                <option value="3">Dressy</option>
-                <option value="4">Formal</option>
-              </select>
-              <p class="help-block text-danger"></p>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="form-group">
-              <h4>Price Range</h4>
-              <select id="price" name="price" class="form-control" required="required">
-                <option value="1">$</option>
-                <option value="2">$$</option>
-                <option value="3">$$$</option>
-                <option value="4">$$$$</option>
-                <option value="5">$$$$$</option>
-              </select>
-              <p class="help-block text-danger"></p>
-            </div>
-          </div><div class="col-md-3">
-            <div class="form-group">
-              <h4>Noise Level</h4>
-              <select id="noise" name="noise" class="form-control" required="required">
-                <option value="1">Not Available</option>
-                <option value="4">Quiet</option>
-                <option value="2">Average</option>
-                <option value="3">Loud</option>
-                <option value="5">Very Loud</option>
-              </select>
-              <p class="help-block text-danger"></p>
-            </div>
-          </div>
-        </div>
-        <div id="ranking"></div>
-        
-        <div class="row text-center">
-          <button class="btn btn-default" onclick="getRanking();">Get Ranking!</button>
-        </div>
-      </form>
-    </div>
-  </div>
-</div>
 
 <div id="footer" class="text-center">
   <div class="container">
-    <p>Copyright 2016 &copy; Team Yelp (Richard Huang, Sebastian Guerrero, Ankit Gupta, Li He)</p>
+    <p>Copyright 2017 &copy; Team Uber (Richard Huang, Vinitha Ranganeni)</p>
   </div>
 </div>
 
@@ -770,136 +544,7 @@
     </div>
   </div>
 </div>
-<!-- Portfolio Modal 4 -->
-<div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
-  <div class="modal-content">
-    <div class="close-modal" data-dismiss="modal">
-      <div class="lr">
-        <div class="rl"> </div>
-      </div>
-    </div>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 col-lg-offset-2">
-          <div class="modal-body"> 
-            <!-- Project Details Go Here -->
-            <h2>Regression</h2>
-            <p class="item-intro">We lastly used regression on the selected features to predict rankings.</p>
-            <img class="img-responsive img-centered" src="img/portfolio/04.jpg" alt="">
-            <p>Having found the optimal subset of features, we went ahead and implemented a Robust Linear Regression model using Leave One Out Cross Validation.</p>
-            <p>Formula Used:
-pitts.formula <- score ~ Take.out +
-  Takes.Reservations +
-  Caters             +
-  neighborhoods      +
-  Wi.Fi              +
-  Drive.Thru         +
-  Alcohol            +
-  hours.Thursday.open  +
-  Attire             +
-  Price.Range +
-  Noise.Level</p>
-            <p>Above is the regression results that we found.</p>
-            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Step</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
 
-<!-- Portfolio Modal 5 -->
-<div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
-  <div class="modal-content">
-    <div class="close-modal" data-dismiss="modal">
-      <div class="lr">
-        <div class="rl"> </div>
-      </div>
-    </div>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 col-lg-offset-2">
-          <div class="modal-body"> 
-            <!-- Project Details Go Here -->
-            <h2>Data Completeness</h2>
-            <p class="item-intro">Our data set comprised of 82 variables, of which 61 fields had more than 25% missing values.</p>
-            <img class="img-responsive img-centered" src="img/portfolio/05.png" alt="">
-            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Step</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- Portfolio Modal 6 -->
-<div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
-  <div class="modal-content">
-    <div class="close-modal" data-dismiss="modal">
-      <div class="lr">
-        <div class="rl"> </div>
-      </div>
-    </div>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 col-lg-offset-2">
-          <div class="modal-body"> 
-            <!-- Project Details Go Here -->
-            <h2>Data Coherence</h2>
-            <p class="item-intro">The graph indicates a strong correlation between review count and rankings for different stars given to the restaurants.</p>
-            <img class="img-responsive img-centered" src="img/portfolio/06.jpg" alt="">
-            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Step</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- Portfolio Modal 7 -->
-<div class="portfolio-modal modal fade" id="portfolioModal7" tabindex="-1" role="dialog" aria-hidden="true">
-  <div class="modal-content">
-    <div class="close-modal" data-dismiss="modal">
-      <div class="lr">
-        <div class="rl"> </div>
-      </div>
-    </div>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 col-lg-offset-2">
-          <div class="modal-body"> 
-            <!-- Project Details Go Here -->
-            <h2>Data Correctness</h2>
-            <p class="item-intro">The data was taken from Yelp Data Challenge and was released by Yelp. We believe the data to be correct since the data comprised of various businesses with masked IDs.</p>
-            <img class="img-responsive img-centered" src="img/portfolio/07.png" alt="">
-            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Step</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- Portfolio Modal 8 -->
-<div class="portfolio-modal modal fade" id="portfolioModal8" tabindex="-1" role="dialog" aria-hidden="true">
-  <div class="modal-content">
-    <div class="close-modal" data-dismiss="modal">
-      <div class="lr">
-        <div class="rl"> </div>
-      </div>
-    </div>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 col-lg-offset-2">
-          <div class="modal-body"> 
-            <!-- Project Details Go Here -->
-            <h2>Data Accountability</h2>
-            <p class="item-intro">Since the data has been scraped from Yelp, the data set satisfies the Accountability factor.</p>
-            <img class="img-responsive img-centered" src="img/portfolio/08.jpg" alt="">
-            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Step</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
 
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
@@ -922,37 +567,6 @@ pitts.formula <- score ~ Take.out +
 
 <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
 <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
-<script type="text/javascript">
-  $(function() {
-    $('.toggle').bootstrapToggle({
-      on: 'Yes',
-      off: 'No'
-    });
-  })
-  function getRanking(){
-    var takeout = $("#take-out").is(":checked") ? 1 : 0;
-    var reservations = $("#reservations").is(":checked") ? 1 : 0;
-    var catering = $("#catering").is(":checked") ? 1 : 0;
-    var wifi = $("#wifi").is(":checked") ? 1 : 0;
-    var drivethu = $("#drive-through").is(":checked") ? 1 : 0;
-    var alcohol = $("#alcohol").is(":checked") ? 1 : 0;
-    var neighborhoods = parseInt($("#neighborhoods").val());
-    var attire = parseInt($("#attire").val());
-    var pricerange = parseInt($("#price").val());
-    var noiselevel = parseInt($("#noise").val());
-
-    var score = 59.1108 + (0.0142 * takeout) + (0.0167 * reservations) + (0.0364 * catering) + (-0.0733 * neighborhoods) + (10.3140 * wifi) + (0.0106 * drivethu) + (0.0793 * alcohol) +  (8.2621 * attire) + (-0.0104 * pricerange) + (-0.9111 * noiselevel);
-
-    var ranking = Math.round(102 - score);
-
-    $("#ranking").html('<div class="row wow fadeInDown text-center" data-wow-delay="400ms"><div class="col-md-12 col-sm-12"><div class="achievement-box"> <span class="count" style="color: black;">' + ranking + '</span><h4 style="color:black;">Ranking</h4></div></div></div>');
-
-    $('#ranking span.count').counterUp({
-          delay: 10, // the delay time in ms
-      time: 1000 // the speed time in ms
-      });
-  }
-</script>
 
 <!-- Javascripts
     ================================================== --> 

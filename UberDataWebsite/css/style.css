@@ -243,7 +243,7 @@ header p {
 }
 #services-section{
 	padding: 100px 0 60px 0;
-	background: linear-gradient(to bottom, rgba(255,255,255,0.6) 0%,rgba(255,255,255,0.6) 100%), url(../img/testimonials-bg.jpg);
+	background: linear-gradient(to bottom, rgba(255,255,255,0.7) 0%,rgba(255,255,255,0.7) 100%), url(../img/testimonials-bg.jpg);
 	background-size: cover;
 	background-attachment: fixed;
 }
@@ -692,4 +692,8 @@ label {
 .toggle-on{
 	background-color: #f59898 !important;
 	color: white !important;
+}
+
+.service p {
+	font-size: 15px;
 }
