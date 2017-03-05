@@ -71,8 +71,8 @@
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#home" class="page-scroll">Home</a></li>
         <li><a href="#about-section" class="page-scroll">About</a></li>
-        <li><a href="#analysis-section" class="page-scroll">Uber by Time</a></li>
-        <li><a href="#understand-section" class="page-scroll">Uber by Neighborhoods</a></li>
+        <li><a href="#analysis-section" class="page-scroll">Uber by Neighborhoods</a></li>
+        <li><a href="#understand-section" class="page-scroll">Uber by Time</a></li>
         <li><a href="#services-section" class="page-scroll">Uber vs. FHV</a></li>
         <li><a href="#method-section" class="page-scroll">Methodology</a></li>
         <li><a href="#team-section" class="page-scroll">Team</a></li>
@@ -270,15 +270,26 @@
       </div>
 
       <div class="row wow fadeInDown" data-wow-delay="200ms">
-        <div class="col-md-4">
-          <div class="about-text">
-            <h1 class="viz-title">Uber Rides By Day of Week By Hour</h1>
-            <h3 class="viz-subtitle">Then we wanted to explore if location had any impact on ranking of the restaurants.</h3>
-            <p>Lastly, we wanted to see if there was anything to be shown about the location of the restaurants. So using a map of Pittsburgh and their ranking you can explore where the top restaurants are, and where the not so high ranking restaurants are.</p>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="about-text text-center">
+              <h1 class="viz-title">Uber Rides By Day of Week By Hour</h1>
+              <h3 class="viz-subtitle">Then we wanted to explore if location had any impact on ranking of the restaurants.</h3>
+              <p>Lastly, we wanted to see if there was anything to be shown about the location of the restaurants. So using a map of Pittsburgh and their ranking you can explore where the top restaurants are, and where the not so high ranking restaurants are.</p>
+            </div>
           </div>
         </div>
-        <div class="col-md-8"> 
-          <div id="sankey"></div>
+        <div class="row">
+          <div class="col-md-12"> 
+            <div id="sankey">
+              <div class="col-md-6"> 
+                <div id="data-2014"></div>
+              </div>
+              <div class="col-md-6"> 
+                <div id="data-2015"></div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       
@@ -907,8 +918,9 @@ pitts.formula <- score ~ Take.out +
 <script type="text/javascript" src="js/contact_me.js"></script> 
 <script type="text/javascript" src="js/owl.carousel.js"></script> 
 
-<script src="http://d3js.org/d3.v3.min.js"></script>
-<script type="text/javascript" src="/js/sankey.js"></script>
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script src="http://vizjs.org/viz.v1.1.0.min.js"></script>
+<script type="text/javascript" src="js/sankey.js"></script>
 
 <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
 <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
