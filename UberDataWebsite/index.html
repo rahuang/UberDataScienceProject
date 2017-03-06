@@ -103,27 +103,19 @@
       <div class="row wow fadeInDown" data-wow-delay="200ms">
         <div class="col-md-6"> 
           <iframe frameborder="no" width="580" height="410" src="http://www.wideo.co/embed/14490681461687860857?width=570&height=400 "></iframe> 
+	  <!--<img src="img/sharing_economy.png" class="img-responsive" alt="sharing_economy">-->
         </div>
         <div class="col-md-6">
           <div class="about-text">
             <h3><span class="color">Why</span> is this important</h3>
-            <p>Our goal is to analyze the popularity of Uber in areas of New York City in comparison to their competitors: Lyft and other car services. We hope to gain insight on the times/areas of activity and the number of rides made in different locations between the various services. Another interesting aspect we’d like to explore is the characteristics (e.g. wealth, density, age, etc.) of the locations that these services are most popular in.</p>
+            <p>The development of information technology has significantly expanded the sharing economy, an economic model that allows individuals to borrow or rent assets owned by other individuals. New ride-sharing providers, such as Uber and Lyft were introduced as an alternative means of transportation by the transportation sharing economy. Previously, in New York City, taxis, buses and subways dominated the transportation service market. When Uber was introduced to New York City, they have been battling with taxi services to dominate the market. 
+</p><p>Our goal is to analyze the popularity of Uber in areas of New York City in comparison to their competitors: Lyft and other car services. We hope to gain insight on the times/areas of activity and the number of rides made in different locations between the various services. Another interesting aspect we’d like to explore is the characteristics (e.g. wealth, density, age, etc.) of the locations that these services are most popular in. </p>
             <h3><span class="color">What</span> are we looking for</h3>
-            <p>
-              In what neighborhoods of New York City are the different ride-sharing, car services and taxis the most popular?
-              <br>
-              What are the characteristics of the various neighborhoods that different ride-sharing and car services are most popular in?
-              <br><br>
-              What is the activity during different times of the day between ride-sharing (Uber), car services and taxis in various neighborhoods in New York City?
-              <br>
-              Are there certain times of day that either one of the services is more popular?
-              <br><br>
-              What is the trend of the activity between Uber and Yellow Cab taxi service from 2014-2016?
-              <br>
-              Has Uber increased in popularity or even surpassed Yellow Cab in number of trips per day?
-              <br>
-              In which months is Uber or Yellow Cab more popular?
-            </p>
+            <ol>
+              <li>In what neighborhoods of New York City are the different ride-sharing, car services and taxis the most popular? What are the characteristics of the various neighborhoods that different ride-sharing and car services are most popular in?</li></br>
+              <li>What is the activity during different times of the day between ride-sharing (Uber), car services and taxis in various neighborhoods in New York City? Are there certain times of day that either one of the services is more popular? What is the trend of the activity between Uber and Yellow Cab taxi service from 2014-2016?</li></br>
+              <li>Has Uber increased in popularity or even surpassed Yellow Cab in number of trips per day? In which months is Uber or Yellow Cab more popular?</li>
+            </ol>
           </div>
         </div>
       </div>
@@ -180,9 +172,8 @@
         <div class="col-md-10">
           <div class="about-text text-center">
             <h1 class="viz-title">NYC Uber Pickup Heat Map</h1>
-            <h3 class="viz-subtitle">After understanding Yelp, we dove deep into the restaurant attributes and analyzed which attributes benefitted each category the most.</h3>
-            <p>Yelp gives restaurants the option to add many categories, essentially making them more unique. A question that came to mind was is there some sort of similarity with the categories that restaurants have and their ranking. Since there were so many categories, to do some comprehensive analysis, we decided to use a word cloud that allows us  to map the most popular categories, based on the restaurants in specific bins. So, if you select 0 to 1, you can tell that they all share the "American(new)," category. This is supposed to allow you as a user to see what are popular categories, or maybe see what is lacking from the top places. The right column tells users what the best attributes to have to achieve a higher ranking for each of the categories.</p>
-            <p>In addition to the word cloud, something we had to do was extract the most important attributes of a restaurant that determine is a success and tanking. Using a Gradient Boosting Machine, we extract the top 8 features, so you can see how they do within the selected group.</p>
+            <h3 class="viz-subtitle">In what areas of NYC is Uber more frequently requested?</h3>
+            <p>Below is a heat map displaying the density of requested ubers in New York City and the Brooklyn area. If we zoom in and view just New York City, we see that most rides are requested from downtown Manhattan.</p>
           </div>
         </div>
         <div class="col-md-1"></div>
@@ -204,9 +195,9 @@
         <div class="col-md-10">
           <div class="about-text text-center">
             <h1 class="viz-title">Uber Pickup Popularity By Neighborhoods</h1>
-            <h3 class="viz-subtitle">We then used a Sankey to explore which days of week people tend to checkin to each category of restaurants.</h3>
-            <p>Along with restaurant and review information, the yelp data set also included check-in information. Check-in information is the time that users check in manually via their phones when they are at a particular business. This information could have valuable insight, so our team decides that the best way to go about exploring the times people check in and where is with a Sankey chart using D3. We explored the top 15 most popular categories and which days of the week yelp reviewers tend to checkin the most frequently.</p>
-            <p>There is no surprise that Friday had the most checkins and Sunday/Monday had the least. One surprising find was that Thursday actually had more checkins compared to Saturday.</p>
+            <h3 class="viz-subtitle">In which neighborhoods of NYC are Uber requests most popular/not popular? What are the characteristics of these neighborhoods?</h3>
+            <p>On the left is a word map depicting the popularity of Uber in the given neighborhoods. The neighborhoods in which Uber is more popular have larger fonts. Likewise, neighborhoods in which Uber is not very popular have smaller fonts. At a quick glance of the word map we see that Midtown, East Village, Tribeca and Union Square are the neighborhoods that are the most popular. These neighborhoods are home to tourist attractions, offices and universities.</p>
+	    <p>On the right we look at more specific characteristics of the top 5 and lowest 5 neighborhoods (in terms of popularity of Uber). We looked at the median age of the both males and females in each of the neighborhoods but see no evidence as to the affect of these characterists on the popularity of uber in the following neighborhoods. However, if we look at the median household income we see that the top 5 neighborhoods, on average, have a significantly higher income in comparison to the neighborhoods in the lowest 5 neighborhoods. Another interesting factor to note is the population density; while looking at the population density alone we see no apparent trend. However, when looking at the the population density of Hamilton Heights and Manhattanville and comparing it do the median household income we see that these neighborhoods are poverty stricken neighborhoods. (Note: couldn't find data for all of the lowest 5; all poverty stricken neighborhoods)</p>
           </div>
         </div>
         <div class="col-md-1"></div>
@@ -239,8 +230,8 @@
         <div class="col-md-4">
           <div class="about-text">
             <h1 class="viz-title">Uber Rides By Day of Week</h1>
-            <h3 class="viz-subtitle">Then we wanted to explore if location had any impact on ranking of the restaurants.</h3>
-            <p>Lastly, we wanted to see if there was anything to be shown about the location of the restaurants. So using a map of Pittsburgh and their ranking you can explore where the top restaurants are, and where the not so high ranking restaurants are.</p>
+            <h3 class="viz-subtitle">Which days of the week is Uber the most popular in 2014 and 2015?</h3>
+            <p>In 2014 we see that Uber is the most popular on Thursday and Friday whereas, in 2015 Uber is the most popular on Thursday, Friday and Saturday. NYC is know for having a very upbeat nightlife and we believe that the rise in popularity of Uber being used on the weekend is for experiencing the nightlife. Along with the increase in usage over the weekend we see the massive increase in the number of rides given per day from 2014 to 2015.</p>
           </div>
         </div>
         <div class="col-md-8"> 
@@ -259,8 +250,8 @@
         <div class="col-md-4">
           <div class="about-text">
             <h1 class="viz-title">Uber Rides By Hour of Day</h1>
-            <h3 class="viz-subtitle">We first wanted to see the validity of Yelp's own ranking based on number of reviews and review stars.</h3>
-            <p>Since we wanted to distinguish what might differentiate the top restaurants from the weaker ones, we needed to find some sort of defining the feature. Upon further exploration, we find out that star rating isn't the attribute that best defines restaurants since the majority of the top restaurants are 4 stars. So, to solve this problem we decided to take the very ambiguous ranking algorithm that Yelp uses to determine more insight about the top restaurants. To do this we scraped the Yelp website for "Best Restaurants in Pittsburgh, Pa," to determine what they are. We only received the top 100 restaurants which are more than half of the total restaurants and the rest we gave them the same ranking. Because there are over a thousand, and that in itself might not be very descriptive we added bins of size 10 to minimize the top 1000 to the top 100 bins. Once, we matched all the bands to the corresponding restaurant, we explored and implore you to explore the relationship that the top restaurants have an average rating and a number of reviews. Using Tableau we explore this, and by selecting the bins you can see correlations, For example selecting groups 0 to 5, you  see how they are all in the top right. As you increase the size or go down the ranking group, the lower average number of reviews, and rating as well.</p>
+            <h3 class="viz-subtitle">How does the activity of Uber vary during the day in 2014 and 2015?</h3>
+            <p>The general trend of the activity of Uber throughout the day in 2014 and 2015 are about the same however, in 2014, while the activity drops off later into the night in 2015, Uber is still very active throughout the night. In 2014, the peak number of rides was at 5pm however in 2015 the peak is at 7pm and the difference between the number of rides given at the peaks is about 700,000. </p>
           </div>
         </div>
       </div>
@@ -275,8 +266,8 @@
           <div class="col-md-12">
             <div class="about-text text-center">
               <h1 class="viz-title">Uber Rides By Day of Week By Hour</h1>
-              <h3 class="viz-subtitle">Then we wanted to explore if location had any impact on ranking of the restaurants.</h3>
-              <p>Lastly, we wanted to see if there was anything to be shown about the location of the restaurants. So using a map of Pittsburgh and their ranking you can explore where the top restaurants are, and where the not so high ranking restaurants are.</p>
+              <h3 class="viz-subtitle">How does Uber's popularity vary throughout the day, each day of the week?</h3>
+              <p></p>
             </div>
           </div>
         </div>
@@ -311,9 +302,8 @@
         <div class="col-md-1"></div>
         <div class="col-md-10">
           <div class="about-text text-center">
-            <h3 class="viz-subtitle">After understanding Yelp, we dove deep into the restaurant attributes and analyzed which attributes benefitted each category the most.</h3>
-            <p>Yelp gives restaurants the option to add many categories, essentially making them more unique. A question that came to mind was is there some sort of similarity with the categories that restaurants have and their ranking. Since there were so many categories, to do some comprehensive analysis, we decided to use a word cloud that allows us  to map the most popular categories, based on the restaurants in specific bins. So, if you select 0 to 1, you can tell that they all share the "American(new)," category. This is supposed to allow you as a user to see what are popular categories, or maybe see what is lacking from the top places. The right column tells users what the best attributes to have to achieve a higher ranking for each of the categories.</p>
-            <p>In addition to the word cloud, something we had to do was extract the most important attributes of a restaurant that determine is a success and tanking. Using a Gradient Boosting Machine, we extract the top 8 features, so you can see how they do within the selected group.</p>
+            <h3 class="viz-subtitle">How does Uber's performance compare to other FHV's in NYC in 2014?</h3>
+            <p>In 2014, Uber was able to surpass other FHV's and come close to the number of rides as the Green Taxis, however, the Yellow Taxis continued to dominate the ride services in NYC.</p>
           </div>
         </div>
         <div class="col-md-1"></div>
