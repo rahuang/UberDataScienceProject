@@ -111,10 +111,9 @@
             <p>The development of information technology has significantly expanded the sharing economy, an economic model that allows individuals to borrow or rent assets owned by other individuals. New ride-sharing providers, such as Uber and Lyft were introduced as an alternative means of transportation by the transportation sharing economy. Previously, in New York City, taxis, buses and subways dominated the transportation service market. When Uber was introduced to New York City, they have been battling with taxi services to dominate the market. 
 </p><p>Our goal is to analyze the popularity of Uber in areas of New York City in comparison to their competitors: Lyft and other car services. We hope to gain insight on the times/areas of activity and the number of rides made in different locations between the various services. Another interesting aspect we’d like to explore is the characteristics (e.g. wealth, density, age, etc.) of the locations that these services are most popular in. </p>
             <h3><span class="color">What</span> are we looking for</h3>
-            <ol>
-              <li>In what neighborhoods of New York City are the different ride-sharing, car services and taxis the most popular? What are the characteristics of the various neighborhoods that different ride-sharing and car services are most popular in?</li></br>
-              <li>What is the activity during different times of the day between ride-sharing (Uber), car services and taxis in various neighborhoods in New York City? Are there certain times of day that either one of the services is more popular?</li></br>
-              <li>What is the trend of the activity between Uber and other FHV services from 2014-2016? Has Uber increased in popularity or even surpassed other services like Yellow Cab in number of trips per day?</li>
+            <p>In what neighborhoods of New York City are the different ride-sharing, car services and taxis the most popular? What are the characteristics of the various neighborhoods that different ride-sharing and car services are most popular in?</p>
+              <p>What is the activity during different times of the day between ride-sharing (Uber), car services and taxis in various neighborhoods in New York City? Are there certain times of day that either one of the services is more popular?</p>
+              <p>What is the trend of the activity between Uber and other FHV services from 2014-2016? Has Uber increased in popularity or even surpassed other services like Yellow Cab in number of trips per day?</p>
             </ol>
           </div>
         </div>
@@ -197,7 +196,7 @@
             <h1 class="viz-title">Uber Pickup Popularity By Neighborhoods</h1>
             <h3 class="viz-subtitle">In which neighborhoods of NYC are Uber requests most popular/not popular? What are the characteristics of these neighborhoods?</h3>
             <p>On the left is a word map depicting the popularity of Uber in the given neighborhoods. The neighborhoods in which Uber is more popular have larger fonts. Likewise, neighborhoods in which Uber is not very popular have smaller fonts. At a quick glance of the word map we see that Midtown, East Village, Tribeca and Union Square are the neighborhoods that are the most popular. These neighborhoods are home to tourist attractions, offices and universities.</p>
-	    <p>On the right we look at more specific characteristics of the top 5 and lowest 5 neighborhoods (in terms of popularity of Uber). We looked at the median age of the both males and females in each of the neighborhoods but see no evidence as to the affect of these characterists on the popularity of uber in the following neighborhoods. However, if we look at the median household income we see that the top 5 neighborhoods, on average, have a significantly higher income in comparison to the neighborhoods in the lowest 5 neighborhoods. Another interesting factor to note is the population density; while looking at the population density alone we see no apparent trend. However, when looking at the the population density of Hamilton Heights and Manhattanville and comparing it do the median household income we see that these neighborhoods are poverty stricken neighborhoods. (Note: couldn't find data for all of the lowest 5; all poverty stricken neighborhoods)</p>
+	    <p>On the right we look at more specific characteristics of the top 5 and lowest 5 neighborhoods (in terms of popularity of Uber). We looked at the median age of the both males and females in each of the neighborhoods but see no evidence as to the affect of these characterists on the popularity of uber in the following neighborhoods. However, if we look at the median household income we see that the top 5 neighborhoods, on average, have a significantly higher income in comparison to the neighborhoods in the lowest 5 neighborhoods. Another interesting factor to note is the population density; while looking at the population density alone we see no apparent trend. However, when looking at the the population density of Hamilton Heights and Manhattanville and comparing it do the median household income we see that these neighborhoods are poverty stricken neighborhoods. <a href="http://www.city-data.com/nbmaps/neigh-New-York-New-York.html#N11">Data on neighborhood characteristics</a></p>
           </div>
         </div>
         <div class="col-md-1"></div>
@@ -468,11 +467,10 @@
         <div class="col-lg-8 col-lg-offset-2">
           <div class="modal-body"> 
             <!-- Project Details Go Here -->
-            <h2>Starting Points</h2>
-            <p class="item-intro">We first needed to do some initial data collection and then cleaning.</p>
+            <h2>Location</h2>
+            <p class="item-intro">Increasing the base price for rides in downtown Mahanttan will increase profits</p>
             <img class="img-responsive img-centered" src="img/portfolio/01.jpg" alt="">
-            <p>As a starting point, a python scraper was designed to scrap and convert JSON data from Yelp to CSV format for further analysis.</p>
-            <p>The script was further modified to create neighbour and sub categories data sets. The respective data sets contained binarized columns representing neighbours and sub categories mapped to business IDs.</p>
+            <p>Downtown Manhattan and neighborhoods such as Midtown, Tribeca, Union Square, etc. have the highest number of requested rides. Increasing the base price by $1-2 will allow Uber to bring in more profits without losing their customers. We have seen that in one hour, Uber has provided up to 1,000,000 rides; if Uber increases the base fare by $2 they can make an extra $2,000,000 in one hour.</p>
             <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Step</button>
           </div>
         </div>
@@ -519,11 +517,10 @@
         <div class="col-lg-8 col-lg-offset-2">
           <div class="modal-body"> 
             <!-- Project Details Go Here -->
-            <h2>Gradient Boosting Machine</h2>
-            <p class="item-intro">We used Gradient Boosting Machine to select the most important features.</p>
+            <h2>Uber vs. FHVs</h2>
+            <p class="item-intro">Uber and Yellow Taxi Service are neck-to-neck</p>
             <img class="img-responsive img-centered" src="img/portfolio/03.jpg" alt="">
-            <p>In gradient boosting machines, or simply, GBMs, the learning procedure consecutively fits new models to provide a more accurate estimate of the response variable. The principle idea behind this algorithm is to construct the new base-learners to be maximally correlated with the negative gradient of the loss function, associated with the whole ensemble. The loss functions applied can be arbitrary, but to give a better intuition, if the error function is the classic squared-error loss, the learning procedure would result in consecutive error-fitting. In general, the choice of the loss function is up to the researcher, with both a rich variety of loss functions derived so far and with the possibility of implementing one's own task-specific loss.</p>
-            <p>This high flexibility makes the GBMs highly customizable to any particular data-driven task. It introduces a lot of freedom into the model design thus making the choice of the most appropriate loss function a matter of trial and error. However, boosting algorithms are relatively simple to implement, which allows one to experiment with different model designs.</p>
+            <p>In 2015, the number of rides provided by Uber surpassed that of all other FHV services except the Yellow Taxi Services, the company that previously dominanted the market. Now, Uber and the Yellow Taxi Services are neck-to-neck. In order, the gain new customers and keep its current ones Uber must gain customer loyalty by providing special services and offers the the Yellow Taxi Services cannot.</p>
             <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Step</button>
           </div>
         </div>
